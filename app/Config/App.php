@@ -11,15 +11,15 @@ class App extends BaseConfig
 	* Base Site URL
 	* --------------------------------------------------------------------------
 	*/
-    public string $baseURL = 'http://localhost:90/Altowsta/FRPrime/Website/';
-	public string $caminho = '/Altowsta/FRPrime/Website/';
+    public string $baseURL = 'http://localhost:90/Altowsta/PedroMariano/Website/';
+	public string $caminho = '/Altowsta/PedroMariano/Website/';
 	##########################################################
 	##########################################################
-    public string $titulosite = 'FR Prime Imóveis';
-    public string $titulopainel = 'FR Prime Imóveis - Painel';
+    public string $titulosite = 'Pedro Mariano Imóveis';
+    public string $titulopainel = 'Pedro Mariano Imóveis - Painel';
 	##########################################################
 	##########################################################
-    
+
 	/**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.

@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
-use App\Libraries\Imoview;
+use App\Libraries\Vista;
 
 class Importacao extends BaseController{
     ######################################################################################################
@@ -32,7 +32,7 @@ class Importacao extends BaseController{
         $logimoveis = array();
         ############################################
 		############################################
-        define('PERPAGE','20');
+        define('PERPAGE','50');
         ############################################
 		############################################
         $dados = $this->dados;

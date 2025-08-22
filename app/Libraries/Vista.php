@@ -29,8 +29,8 @@ namespace App\Libraries;
 #############################################
 class Vista{
 
-	public $vista_usr = 'passowim';
-	public $vista_key = 'f18610ce0b3f650718ff2e0ebebc0221';
+	public $vista_usr = 'nnimov';
+	public $vista_key = 'ef66397d2412618c4a7d5259f6f965de';
 
 	public function __construct(array $params = []){
         if( !empty($params) ){
@@ -382,8 +382,6 @@ class Vista{
 		$result = curl_exec( $ch );
 
 		$result = json_decode( $result, true );
-
-		//Debugar($result,1);
 
 		return $result;
 		#############################################

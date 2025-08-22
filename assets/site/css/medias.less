@@ -2,72 +2,97 @@
 	.text-lg-end{text-align: right;}
 }
 
+@media (max-width:1180px){
+	header .ma{gap:1.2rem;}
+	.menu-desk a{gap:.5rem;font-size: .7rem !important;}
+}
+
 @media (max-width: 1300px){
 	.resultados .gutter-x3{--bs-gutter-x: 1.5rem;}
 	.card-imovel .va-code .va{font-size: .85rem;}
 	.card-imovel .va-code .code{gap:.2rem;font-size:.7rem;}
 	.card-imovel ul{font-size: .85rem;gap: 0.2rem;}
-	.card-imovel h2, .card-imovel h3{height: 56px;font-size: .85rem !important;}
+	.card-imovel h2, .card-imovel h3{height: 35px;font-size: .85rem !important;}
+	.menu-desk {gap:1rem;}
+	.cols-busca>li{padding-right:1rem;}
+	.cols-busca{gap:.5rem;}
+}
+
+@media (max-width:1050px){
+    .cols-busca>li {padding-right: 0.5rem;}
 }
 
 @media (max-width: 992px){
-	header .bts-cits{display: none;}
+	.hidden-mobile, .img-avalie{display: none !important;}
 	.b {border-right: none;}
 	.itens-busca .col-bts, .itens-busca .col-bt, .bt-busca{width: 100%;}
-	.itens-busca .col-bt{padding: 0 1.2rem !important;margin-top: 0.5rem !important;}
-	.text-left-mobile{text-align: left;}
-	.title-sc-home{gap: 0.8rem;}
-	.atuacao-home {padding: 2rem 0;}
-	.mais-buscados{grid-template-columns: 1fr 1fr 1fr;}
-	footer h2{font-size: .8rem;}
-	footer ul{margin-bottom: 1rem;}
-	footer{padding: 1rem 0 3rem;}
-	.resultados .order{text-align: left;}
-	.ca-passos{grid-template-columns: 1fr 1fr;gap:1.5rem;}
-	.oportunidade {grid-template-columns: 1fr 1fr;}
+	.itens-busca .col-bt{margin-top: 0.5rem !important;}
+	.itens-busca .col-bt .bt-busca{border-radius: 0 0 22px 22px;padding: 1rem;}
+	.itens-busca .col-bts{padding: .75rem .5rem;}
+	.busca-home .bc{margin-top: 3rem;}
+	footer .form-news{margin-top:1rem;}
+	.nav-cards{flex-wrap: wrap;gap: 0.5rem;}
+	.home{margin-top: 2rem;}
+	.topo-cits .nav-cards{background:#202020;}
+	.bt-right a{justify-content: center;}
+	.title-tabs h2{text-align: center;}
+	.cols-busca{flex-wrap: wrap;}
+	.cols-busca>li{padding:0;border:none;}
+	.checks-agenda{grid-template-columns: repeat(5, 1fr);}
+	.checks-agenda li{max-width: none;}
+	.title-ficha .code{position: unset;width: 100%;display: block;margin-top: 1rem;text-align: center;}
+	.ficha h1{text-align: center}
 }
 
 @media (max-width: 768px){	
-	.check-radio input+label{padding: 0.8rem 0.9rem 2rem;border-radius: 12px 12px 0 0;font-size: .8rem;}
-	.check-tipos input+label{border-radius: 35px;padding: .5rem 1rem;}
-	.check-quartos input+label{border-radius: 5px;padding:.5rem;}
-	.checks-home .check-radio li:nth-child(2) input+label, .checks-home .check-radio li:nth-child(3) input+label {padding-left: 44px;}
-	.title-home h2 br{display: none;}
-	.sobre-home{flex-wrap: wrap;gap:0;}
-	.sobre-home figure img{border-radius: 28px 28px 0 0;}
-	.sobre-home .texto-sobre{padding: 1rem 2rem 2rem;margin: 0;}
-	.fter{padding: 1.5rem 1rem;}
-	footer li{margin-bottom: .5rem;}
-	.prime-box{padding: 1rem 2rem;border-radius: 25px;}
-	.card-prime{gap:1.3rem;}
-	.card-prime figure{min-width: 135px;}
-	.e-fone li{text-align: left;}
-	.thumbs li img{border-radius: 0 !important;}
-	.thumbs{display: flex;gap: 10px;flex-wrap: wrap;}
-	.thumbs li figure{height: 95px;}
-	.thumbs li:nth-child(1){width: 100%;}
-	.thumbs li:nth-child(1) figure{height: 250px;}
-	.thumbs li{width: ~'calc(50% - 5px)';}
-	.infra ul{grid-template-columns: 1fr 1fr;}
-	.mapa-ficha .ads{padding: 1.2rem 1rem;gap: .8rem;flex-wrap: wrap;}
+	footer .newsfooter{padding: 1.5rem 2rem 3rem;}
+	footer .footer {padding: 2rem 2rem;}
+	footer .footer .menu-desk{gap:.8rem;margin-top: 1rem;}
+	.form-news label{padding: .45rem 0.7rem;}
+	footer .form-news{flex-wrap: wrap;}
+	.form-news input[type=submit], .form-news label{width: 100%;}
+	.form-news .nome {border-bottom: 1px solid #eee;border-right: none;}
+	.topo-cits .nav-cards .prime{margin-left: unset;}
+	.tab-navs{padding: 1.5rem 2.5rem 1rem;}
+	.topo-cits .nav-cards{padding:1.3rem 1.55rem 1.4rem;}
+	.title-tabs h2{font-size: .9rem;text-align: center;}
+	.thumbs-empresa{grid-template-columns:1fr 1fr 1fr;}
+	.bts-empresa{display: none;}
+	.figure-title .sobre-title{padding: 0 1.75rem;bottom: 1.3rem;}
+	.empresa {padding: 3rem 0;}
+	.figure-title{height: 175px}
+	.texto-inteligencia p, .texto-trabalhe{column-count: 1;}
+	.box-avalie{flex-wrap: wrap;}
+	.box-avalie figure{width: 100%;border-radius: 15px 15px 0 0;}
+	.box-avalie .tex-avalie {padding: 2rem;}
+	.form-section .form-inputs{padding:1.5rem;}
+	.order-title{flex-wrap: wrap;gap:.6rem;}
+	.order-title .selct-order{border:none;}
+	.box-empreendimento{flex-wrap: wrap;}
+	.box-empreendimento figure, .box-empreendimento .texto-emp{width: 100%;}
+	.box-empreendimento figure{height: 280px;}
+	.thumbs-ficha ul li:nth-child(1){width: 100%;}
+	.thumbs-ficha ul li{width: 25%;padding: 0.2rem;}
+	.thumbs-ficha ul li:nth-child(1) figure {height: 300px;}
+	.thumbs-ficha ul figure{height: 120px;}
+	.thumbs-ficha ul {margin-left: -0.2rem;margin-right: -0.2rem;}
 }
 
 @media (max-width:576px){	
-	.co-home input {max-width: 115px;width: 115px;}
-	.co-home input, .co-home a{font-size: .85rem;}
-	.mais-buscados{grid-template-columns: 1fr 1fr;}
-	.local-empresa h3{font-size: .8rem;}
-	.empresa .imagem-empresa {height: 215px;}
-	.bt-favs{margin-top: 1rem;}
-	.bt-favs a{justify-content: start;}
-	.ficha .bts-ficha{gap:.5rem;}
-	.bts-ficha a{padding: 0 .5rem .5rem;}
-	.lista-seta li{font-size: .8rem;}
-	.stiky-side .box-infos{padding:1.5rem 2rem;}
-	.box-nivo{padding:1.5rem;}
+	.thumbs-empresa{grid-template-columns:1fr 1fr;}
+	.thumbs-empresa li {height: 125px;}
+	.checks {grid-template-columns: 1fr;}
+	.pg li a {padding: 0.2rem 0.2rem;}
+	.code-emp input{width: 247px !important;}
+	.checks-agenda{grid-template-columns: repeat(3, 1fr);}
+	.box-empreendimento .title{flex-wrap: wrap;}
+	.itens{flex-wrap: wrap;}
+	.thumbs-ficha .bts-modal{bottom: 20px;left: 15px;}
+	.box-side .valor span {font-size: 1.2rem;}
 }
 
 @media (max-width:450px){
-	.ca-passos, .oportunidade{grid-template-columns: 1fr;}
-	.ca-passos li{align-items: center;}
+	.thumbs-ficha ul li {width: 50%;}
+	.box-side{padding:1rem;}
+	.box-side .iptu{font-size: .7rem;}
 }

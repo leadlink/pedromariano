@@ -1,167 +1,174 @@
-    	<footer>
+		<footer>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 col-12">
-					<div class="row">
-						<div class="col-lg-4 col-6 menu my-3">
-							<h2>INSTITUCIONAL</h2>
-							<ul>
-							    <li><a href="<?php echo base_url(); ?>empresa/" title="Sobre a FR Prime">Sobre a FR Prime</a></li>
-                                <li><a href="<?php echo base_url(); ?>empresa/" title="Nosso Fundador">Nosso Fundador</a></li>
-                                <li><a href="<?php echo base_url(); ?>fale-conosco/" title="Trabalhe Conosco">Trabalhe Conosco</a></li>
-                                <li><a href="<?php echo base_url(); ?>" title="Na Mídia">Na Mídia</a></li>
-                                <li><a href="<?php echo base_url(); ?>depoimentos/" title="Depoimentos">Depoimentos</a></li>
-                                <li><a href="<?php echo base_url(); ?>fale-conosco/" title="Ouvidoria">Ouvidoria</a></li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4 col-6 menu my-3">
-							<h2>SOLUÇÕES IMOBILIÁRIAS</h2>
-							<ul>
-                                <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/1/" title="Comprar Imóvel">Comprar Imóvel</a></li>
-                                <li><a href="<?php echo base_url(); ?>busca/alugar/cidade/volta-redonda/1/" title="Alugar Imóvel">Alugar Imóvel</a></li>
-                                <li><a href="<?php echo base_url(); ?>anuncie-seu-imovel/" title="Anuncie seu Imóvel">Anuncie seu Imóvel</a></li>
-                                <li><a href="<?php echo base_url(); ?>avaliar-imovel-gratis/" title="Calculadora de Valor de Imóvel">Calculadora de Valor de Imóvel</a></li>
-                                <li><a href="<?php echo base_url(); ?>" title="Regularização de Imóveis">Regularização de Imóveis</a></li>
-                                <li><a href="<?php echo base_url(); ?>" title="Construção Sob Medida">Construção Sob Medida</a></li>
-                                <li><a href="<?php echo base_url(); ?>" title="Minha Casa Minha Vida (Primeiro Imóvel)">Minha Casa Minha Vida (Primeiro Imóvel)</a></li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4 col-6 menu my-3">
-							<h2>IMÓVEIS À VENDA</h2>
-							<ul>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/1/">Imóveis à Venda</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/valor_ate/300000/1/">Imóveis à Venda: até 300 mil</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/valor_de/300000/valor_ate/500000/1/">Imóveis à Venda: de 300 a 500 mil</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/valor_de/500000/valor_ate/1000000/1/">Imóveis à Venda: de 500 a 1.000.000</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/valor_de/1000000/1/">Imóveis à Venda: a partir de 1.000.000</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/categorias/apartamentos/1/">Apartamentos à Venda</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/categorias/casas/1/">Casas à Venda</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/categorias/terrenos/1/">Terrenos à Venda</a></li>
-							  <li><a href="<?php echo base_url(); ?>busca/comprar/cidade/volta-redonda/1/">Ver Mais Imóveis à Venda</a></li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4 col-6 menu my-3">
-							<h2>SOCIAL</h2>
-							<ul>
-                                <li><a href="<?php echo base_url(); ?>" title="Projeto 1C5C">Projeto 1C5C</a></li>
-                                <li><a href="<?php echo base_url(); ?>" title="Programa de Indicações">Programa de Indicações</a></li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4 col-6 menu my-3">
-							<h2>LOCAÇÃO POR TEMPORADA</h2>
-							<ul>
-                                <li><a href="<?php echo base_url(); ?>busca/alugar/cidade/volta-redonda/1/" title="Alugue">Alugue</a></li>
-                                <li><a href="<?php echo base_url(); ?>anuncie-seu-imovel/" title="Anuncie">Anuncie</a></li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4 col-6 menu my-3">
-							<h2>SIGA-NOS</h2>
-							<ul>
-                                <?php if( !empty($config->instagram) ){ ?><li><a href="<?php echo $config->instagram; ?>" target="_blank" title="Instagram">Instagram</a></li><?php } ?>
-                                <?php if( !empty($config->youtube) ){ ?><li><a href="<?php echo $config->youtube; ?>" target="_blank" title="Youtube">Youtube</a></li><?php } ?>
-                                <?php if( !empty($config->facebook) ){ ?><li><a href="<?php echo $config->facebook; ?>" target="_blank" title="Facebook">Facebook</a></li><?php } ?>
-                                <?php if( !empty($config->linkedin) ){ ?><li><a href="<?php echo $config->linkedin; ?>" target="_blank" title="LinkedIn">LinkedIn</a></li><?php } ?>
-							</ul>
-						</div>
+			<div class="newsfooter">
+				<div class="row">
+					<div class="col-xl-6 col-lg-5 col-12 my-auto">
+						<h2>Receba nossas novidades</h2>
+						<p>Assine e acompanhe o que há de novo</p>
+					</div>
+					<div class="col-xl-6 col-lg-7 col-12 my-auto py-2">
+						<form action="" class="form-news">
+							<label class="nome">
+								<span>NOME</span>
+								<input type="text" placeholder="Digite" name="nome">
+							</label>
+							<label class="email">
+								<span>E-MAIL</span>
+								<input type="text" placeholder="Digite" name="email">
+							</label>
+							<input type="submit" value="Enviar">
+						</form>
 					</div>
 				</div>
-				<div class="col-lg-3 col-12 my-3">
-					<h2>INVESTIDOR</h2>
-					<ul>
-                        <li><a href="<?php echo base_url(); ?>" title="Investir em São Paulo">Investir em São Paulo</a></li>
-                        <li><a href="<?php echo base_url(); ?>" title="Investir e Airbnb">Investir e Airbnb</a></li>
-                        <li><a href="<?php echo base_url(); ?>" title="Leilões de Imóveis">Leilões de Imóveis</a></li>
-                        <li><a href="<?php echo base_url(); ?>" title="Consultoria Imobiliária para Investidores">Consultoria Imobiliária para Investidores</a></li>
-					</ul>
+			</div>
 
-					<h2>FINANCIAMENTO E CONSÓRCIO</h2>
-					<ul>
-                        <li><a href="<?php echo base_url(); ?>" title="Consórcio Imobiliário">Consórcio Imobiliário</a></li>
-                        <li><a href="<?php echo base_url(); ?>" title="Financiamento Imobiliário">Financiamento Imobiliário</a></li>
-                        <li><a href="<?php echo base_url(); ?>" title="Crédito com Garantia de Imóvel">Crédito com Garantia de Imóvel</a></li>
-					</ul>
+			<div class="footer">
+				<div class="row">
+					<div class="col-lg-3 col-12 logo">
+						<a href="<?php echo base_url().Origem(); ?>" title="<?php echo $config->titulo; ?>">
+							<img src="<?php echo base_url()."uploads/".$config->logo2; ?>" alt="<?php echo $config->titulo; ?>">
+						</a>
+					</div>
+					<div class="col-lg-9 col-12 my-auto">
+						<ul class="menu-desk">
+							<li>
+								<a href="#whatsapp" data-bs-toggle="modal" title="WhatsApp">
+									<?php include caminho_fisico()."assets/site/img/wpp.svg"; ?>
+									<?php echo $config->whatsapp; ?>
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>trabalhe-conosco/" title="Trabalhe Conosco">
+									<?php include caminho_fisico()."assets/site/img/trabalhe.svg"; ?>
+									Trabalhe Conosco
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>empresa/" title="Empresa">
+									<?php include caminho_fisico()."assets/site/img/empresa.svg"; ?>
+									Empresa
+								</a>
+							</li>
+							<li>
+								<a href="<?php echo base_url(); ?>avaliar-imovel-gratis/" title="Avalie imóvel Grátis">
+									<?php include caminho_fisico()."assets/site/img/tag.svg"; ?> Avalie imóvel Grátis
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 my-3"><hr class="line"></div>
 
-					<h2>
-                        <a href="<?php echo base_url(); ?>" title="Loja da Prime">
-                            LOJA DA PRIME
-                        </a>
-                    </h2>
-					<h2 class="my-3 py-3">
-                        <a href="https://blog.frprimeimoveis.com.br/" title="Blog da Prime">
-                            BLOG DA PRIME
-                        </a>
-                    </h2>
-					<h2>
-                        <a href="<?php echo base_url(); ?>anuncie-seu-imovel/" title="Anuncie seu Imóvel">
-                            ANUNCIE SEU IMÓVEL
-                        </a>
-                    </h2>
-				</div>
+					<div class="col-lg-3 col-12 mt-4">
+						<h2>Navegação</h2>
 
-				<div class="col-12 mt-4">
-					<div class="row fter">
-						<div class="col-lg-6 col-sm-12 col-12">
-							<div class="row">
-								<div class="col-lg-3 col-sm-4 col-12 logo my-3 my-lg-auto">
-									<a href="<?php echo base_url().Origem(); ?>" title="<?php echo $config->titulo; ?>">
-										<img src="<?php echo base_url()."uploads/".$config->logo2; ?>" alt="<?php echo $config->titulo; ?>">
+						<ul class="menu-footer">
+							<li><a href="<?php echo base_url().Origem(); ?>" title="Página Inicial">Página Inicial</a></li>
+							<li><a href="<?php echo base_url(); ?>anuncie-seu-imovel/" title="Anuncie seu Imóvel">Anuncie seu Imóvel</a></li>
+							<li><a href="<?php echo base_url(); ?>avaliar-imovel-gratis/" title="Avaliar Imóvel Grátis">Avaliar Imóvel Grátis</a></li>
+							<li><a href="<?php echo base_url(); ?>empresa/" title="Empresa">Empresa</a></li>
+							<li><a href="<?php echo base_url(); ?>fale-conosco/" title="Fale Conosco">Fale Conosco</a></li>
+							<li><a href="<?php echo base_url(); ?>trabalhe-conosco/" title="Trabalhe Conosco">Trabalhe Conosco</a></li>
+							<li><a href="<?php echo base_url(); ?>financiamento/" title="Financiamento de Imóveis">Financiamento de Imóveis</a></li>
+							<li><a href="<?php echo base_url(); ?>servicos/" title="Serviços">Serviços</a></li>
+							<li><a href="<?php echo base_url(); ?>" title="Blog" target="_blank">Blog</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-9 col-12">
+						<div class="row">
+							<?php foreach( $enderecos as $endereco ){ ?>
+							<div class="col-lg-4 col-sm-6 endes mt-3">
+								<h2><?php echo $endereco->local; ?></h2>
+								<address>
+									<a href="<?php echo $endereco->maps; ?>" title="Traçar Rota" target="_blank">
+										<?php echo $endereco->endereco; ?><br>
+										<?php echo $endereco->bairro; ?><br>
+										<?php echo $endereco->cidade; ?>, <?php echo $endereco->estado; ?> <br>
+										CEP: <?php echo $endereco->cep; ?>
 									</a>
-								</div>
-								<div class="col-lg-9 col-sm-8 col-12 sobre my-3 my-lg-auto">
-									<p>Somos referência em consultoria imobiliária e investimentos imobiliários em Volta Redonda, São Paulo e Alphaville. <br>Na FR Prime, oferecemos soluções completas para compra, venda, locação e consórcio de imóveis, sempre com atendimento personalizado e visão estratégica. <br>Conectamos nossos clientes aos melhores imóveis residenciais, comerciais e para renda, com segurança, clareza e foco em valorização patrimonial. <br>Sua próxima negociação imobiliária começa com a FR Prime.</p>
-								</div>
+								</address>
+								<a href="mailto:sac@pedromariano.com.br" class="mail">sac@pedromariano.com.br</a>
+								<a href="<?php echo $endereco->maps; ?>" title="Traçar Rota" target="_blank" class="rota">Traçar Rota</a>
 							</div>
-						</div>
-						<div class="col-lg-6 col-sm-12 col-12 enfone">
-							<h2>FALE CONOSCO</h2>
-							<div class="row">
-								<?php foreach( $enderecos as $endereco ){ ?>
-								<div class="col-lg-6 col-sm-6 col-12 enfone mb-3">
-									<address>
-										<strong><?php echo $endereco->local; ?> - <?php echo $endereco->estado; ?></strong><br>
-										<a href="<?php echo $endereco->maps; ?>" title="Traçar Rota" target="_blank">
-											<?php echo $endereco->endereco; ?><br>
-											<?php echo $endereco->bairro; ?>
-										</a>
-									</address>
-									<ul>
-										<li>
-											<a href="tel:+<?php echo Telefone($endereco->telefone); ?>" title="Telefone" target="_blank">
-												<?php include caminho_fisico()."assets/site/img/fone.svg"; ?>
-												<?php echo $endereco->telefone; ?>
-											</a>
-										</li>
-										<li>
-											<a href="#whatsapp<?php echo ($endereco->id == '2')?'-alphaville':''; ?>" data-bs-toggle="modal" title="WhatsApp" class="bt-fone">
-												<?php include caminho_fisico()."assets/site/img/wpp.svg"; ?>
-												<?php echo $endereco->whatsapp; ?>
-											</a>
-										</li>
-									</ul>
-									<span class="cep">CEP: <?php echo $endereco->cep; ?></span>
-								</div>
-								<?php } ?>
-							</div>
-						</div>
+							<?php } ?>
 
+							<div class="col-lg-4 col-sm-6 endes mt-3">
+								<h2>Siga-nos</h2>
+
+								<ul class="share">
+									<?php if( !empty($config->instagram) ){ ?>
+									<li>
+										<a href="<?php echo $config->instagram; ?>" target="_blank" title="Instagram">
+											<?php include caminho_fisico()."assets/site/img/i_instagram.svg"; ?> Instagram
+										</a>
+									</li>
+									<?php } ?>
+									<?php if( !empty($config->youtube) ){ ?>
+									<li>
+										<a href="<?php echo $config->youtube; ?>" target="_blank" title="Youtube">
+											<?php include caminho_fisico()."assets/site/img/i_youtube.svg"; ?> Youtube
+										</a>
+									</li>
+									<?php } ?>
+									<?php if( !empty($config->pinterest) ){ ?>
+									<li>
+										<a href="<?php echo $config->pinterest; ?>" target="_blank" title="Pinterest">
+											<?php include caminho_fisico()."assets/site/img/i_pinterest.svg"; ?> Pinterest
+										</a>
+									</li>
+									<?php } ?>
+									<?php if( !empty($config->tiktok) ){ ?>
+									<li>
+										<a href="<?php echo $config->tiktok; ?>" target="_blank" title="TikTok">
+											<?php include caminho_fisico()."assets/site/img/i_tiktok.svg"; ?> TikTok
+										</a>
+									</li>
+									<?php } ?>
+									<?php if( !empty($config->twitter) ){ ?>
+									<li>
+										<a href="<?php echo $config->twitter; ?>" target="_blank" title="Twitter">
+											<?php include caminho_fisico()."assets/site/img/i_twitter.svg"; ?> Twitter
+										</a>
+									</li>
+									<?php } ?>
+									<?php if( !empty($config->facebook) ){ ?>
+									<li>
+										<a href="<?php echo $config->facebook; ?>" target="_blank" title="Facebook">
+											<?php include caminho_fisico()."assets/site/img/i_facebook.svg"; ?> Facebook
+										</a>
+									</li>
+									<?php } ?>
+									<?php if( !empty($config->linkedin) ){ ?>
+									<li>
+										<a href="<?php echo $config->linkedin; ?>" target="_blank" title="LinkedIn">
+											<?php include caminho_fisico()."assets/site/img/i_linkedin.svg"; ?> LinkedIn
+										</a>
+									</li>
+									<?php } ?>
+								</ul>
+							</div>
+
+							<div class="col-12 horarios mt-4">
+								<h2>Horários de atendimento</h2>
+								<time><strong>Administrativo:</strong> Segunda-feira à Sexta-feira 8h30 às 18h. Sábado das 8h30 às 12h30.</time>
+								<time><strong>Vendas e locação:</strong> Segunda-feira à Sexta-feira 8h30 às 18h. Sábado das 8h30 às 13h.</time>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 my-3">
+						<hr class="line">
+					</div>
+
+					<div class="col-12">
+						<p class="texfooter">Atuamos com excelência no mercado imobiliário do ABC Paulista, especialmente em São Bernardo do Campo, Santo André e São Caetano do Sul. Oferecemos soluções completas em compra, venda, locação e administração de imóveis residenciais e comerciais. Com atendimento personalizado e transparente, buscamos sempre a melhor experiência para nossos clientes. Conte com nossa equipe para realizar seu sonho com segurança e confiança!</p>
 					</div>
 				</div>
+			</div>
 
-				<ul class="col-12 bottom-footer">
-					<li>
-                        <a href="<?php echo base_url(); ?>politica-de-privacidade/" title="Política de Privacidade">Política de Privacidade</a>
-                    </li>
-					<li>Creci <?php echo $config->creci; ?></li>
-					<li>
-						Site para imobiliárias
-						<a href="https://www.leadlink.com.br/personalizado/<?php echo REFERENCIA; ?>/" title="Site para imobiliarias Lead Link" rel="noopener" target="_blank"><strong>Lead Link</strong></a>
-                    </li>
-				</ul>
+			<div class="sub-footer">
+				<div><a href="<?php echo base_url(); ?>politica-de-privacidade/" title="Política de Privacidade">Política de Privacidade</a></div>
+				<div>CRECI: <?php echo $config->creci; ?></div>
 			</div>
 		</div>
 	</footer>

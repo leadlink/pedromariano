@@ -1483,12 +1483,12 @@ if( !function_exists('ConvertCase') ){
 
         $subsA = [
             "/Rj"," Da ", " De ", " Di ", " Do ", " Du ", " Um ", " Uma ", " Das ", " Des ", " Dis ", " Dos ", " Dus ", " A ",
-            " E ", " I ", " O ", " U ", " Ers ", "Ers-", " Uns ", "R ", "Pc ", "Tv Travessa ", "Est ", "Tv ", "Av ", "Av.", "Al ",
+            " E ", " I ", " O ", " U ", " Uns ", "R ", "Pc ", "Tv Travessa ", "Est ", "Tv ", "Av ", "Av.", "Al ",
             "Teresopolis", "Petropolis", "Sao ", "Joao", "Jose", "Independencia", "Assuncao", "Gravatai", "Botanico",
             "Lindoia", "Chacara", "America", "Exposicao", "Gloria", "D'areia", "Da Areia", "D?Areia", "da Areia",
             "Sebastiao", "Tres", "Conceicao", "Antonio", "Sabara", " Ceu", "Beira-Mar", "Mario", "Protasio", "Sarandí",
             "Saude", "Familia", "Guaruja", "Humaita", "Higienopolis", "Goncalves", "Inacio", "Xii", "Xiii", "Getulio",
-            "Icarai", "Aparicio", "Lg ", "Bc ", "Rs-", "Sc-", "Br - ", "Br-", "Via Br ", " Br ", "Lrg ", "R. ", " Á ", " À ", " É ", " C/ ", " No ", " Na ",
+            "Icarai", "Aparicio", "Lg ", "Bc ", "Lrg ", "R. ", " Á ", " À ", " É ", " C/ ", " No ", " Na ",
             " Nos ", " Nas ", " Em ", " P/ ", " Para ", " P/", "Fte", "Fdos", "Wc", " C/", " C ", " Por ", "Servico", "24Hs", "24 Hs", "24 hs", "24hs",
             "Moveis", " Sem ", "Patio", "Pavilhao", "Pe Direito", "Suite", "Dormitorio", "Tabuao", "Ceramica", "Plantao",
             "Predio", "Ocupacao", " Ao ", " Aos ", "Vestiario", "Armario", "Galpao", "c/", "p/", "Terreo", "Máquina ",
@@ -1498,16 +1498,18 @@ if( !function_exists('ConvertCase') ){
             "Xv ", " Ii", " IIi", " Xii", " Xiii", " Vii", " Viii", " Lii", " Liii", " Dii", " Diii", " Cii", " Ciii", " Mii", " Miii", "Passo d&Amp;#039;Areia",
             "Agua", "Pq.", "Pq", "Pauliista", "Resrva", "Res.", "Resid ", "Conj.", "Jd.", "Jd", "V.tupi", "Cristovao",
             "Capao","Crist.colombo","Tuyuty Trav","Vig José Inácio","Sen Salgado Filho","Crist. Colombo","Pça","Xv","Gen ","Cel. ","Germano P Júnior",
-			"Viamao","Pres.franklin Roosevelt","Cel Lucas Oliveira","Dr ","XV Novembro","Prof "
+			"Viamao","Pres.franklin Roosevelt","Cel Lucas Oliveira","Dr ","XV Novembro","Prof ","Pcd",
+			"Km"," Ers ","Rs-","Rs 0","Rs 1","Rs 2","Rs 3","Rs 4","Rs 5","Rs 6","Rs 7","Rs 8","Br-"," Br ","Br 0","Br 1","Br 2","Br 3","Br 4",
+            "Sp-","Sp 0","Sp 1","Sp 2","Sp 3","Sp 4","Sp 5","Sp 6","Sp 7","Sp 8"
         ];
         $subsB = [
             "/RJ"," da ", " de ", " di ", " do ", " du ", " um ", " uma ", " das ", " des ", " dis ", " dos ", " dus ", " a ",
-            " e ", " i ", " o ", " u ", " ERS-", "ERS-", " uns ", "Rua ", "Praça ", "Travessa ", "Estrada ", "Travessa ", "Avenida ", "Avenida", "Alameda ",
+            " e ", " i ", " o ", " u ", " uns ", "Rua ", "Praça ", "Travessa ", "Estrada ", "Travessa ", "Avenida ", "Avenida", "Alameda ",
             "Teresópolis", "Petrópolis", "São ", "João", "José", "Independência", "Assunção", "Gravataí", "Botânico",
             "Lindóia", "Chácara", "América", "Exposição", "Glória", "da Areia", "da Areia", "da Areia", "da Areia",
             "Sebastião", "Três", "Conceição", "Antônio", "Sabará", " Céu", "Beira Mar", "Mário", "Protásio", "Sarandi",
             "Saúde", "Família", "Guarujá", "Humaitá", "Higienópolis", "Gonçalves", "Inácio", "XII", "XIII", "Getúlio",
-            "Icaraí", "Aparício", "Largo ", "Beco ", "RS-", "SC-", "BR-", "BR-", "BR-", " BR-", "Largo ", "Rua ", " á ", " à ", " é ", " com ", " no ", " na ",
+            "Icaraí", "Aparício", "Largo ", "Beco ", "Largo ", "Rua ", " á ", " à ", " é ", " com ", " no ", " na ",
             " nos ", " nas ", " em ", " para ", " para ", " para ", "Frente", "Fundos", "WC", " com ", " com ", " por ", "Serviço", "24h", "24h", "24h", "24h",
             "Móveis", " sem ", "Pátio", "Pavilhão", "Pé Direito", "Suíte", "Dormitório", "Tabuão", "Cerâmica", "Plantão",
             "Prédio", "Ocupação", " ao ", " aos ", "Vestiário", "Armário", "Galpão", " com ", " para ", "Térreo", "Máquina ",
@@ -1517,10 +1519,21 @@ if( !function_exists('ConvertCase') ){
             "XV ", " II", " III", " XII", " XIII", " VII", " VIII", " LII", " LIII", " DII", " DIII", " CII", " CIII", " MII", " MIII", "Passo da Areia",
             "Água", "Parque", "Parque", "Paulista", "Reserva", "Reserva", "Residencial ", "Conjunto", "Jardim", "Jardim", "Tupi", "Cristóvão",
             "Capão","Cristóvão Colombo","Travessa Tuyuty","Vigário José Inácio","Senador Salgado Filho","Cristóvão Colombo","Praça","XV","General ","Coronel ","Germano Petersen Júnior",
-			"Viamão","Presidente Franklin Roosevelt","Coronel Lucas Oliveira","Doutor ","XV de Novembro","Professor "
+			"Viamão","Presidente Franklin Roosevelt","Coronel Lucas Oliveira","Doutor ","XV de Novembro","Professor ","PCD",
+			"KM"," RS-","RS-","RS-0","RS-1","RS-2","RS-3","RS-4","RS-5","RS-6","RS-7","RS-8","BR-"," BR-","BR-0","BR-1","BR-2","BR-3","BR-4",
+            "SP-","SP-0","SP-1","SP-2","SP-3","SP-4","SP-5","SP-6","SP-7","SP-8"
         ];
 
-        return str_replace($subsA, $subsB, $campo);
+        $dado = str_replace($subsA,$subsB,$campo);
+		$dado = preg_replace('/\s+/', ' ', $dado);
+		$dado = trim($dado);
+		$dado = rtrim($dado,',');
+		$dado = ltrim($dado,',');
+		$dado = rtrim($dado,'.');
+		$dado = ltrim($dado,'.');
+		$dado = trim($dado);
+
+        return $dado;
     }
 }
 ################################################################

@@ -302,7 +302,19 @@ $(document).ready(function () {
 	}
 	/* ####################### */
 	/* ####################### */
-	$('.card-acordion h4').on('click', function () {
+	// TABS DA HOME
+	$(".nav-cards a").on('click', function (e) {
+		var tabId = $(this).attr('href');
+		if (tabId.startsWith("#")) {
+			e.preventDefault();
+			$('.nav-cards a, .tab-navs').removeClass('ativo')
+			$(this).addClass('ativo');
+			$('.tab-navs' + tabId).addClass('ativo');
+		}
+	});
+	/* ####################### */
+	/* ####################### */
+	$('.card-acordion h4').click(function () {
 		const $this = $(this);
 		const $texto = $this.next('.acordion-texto');
 
@@ -367,7 +379,7 @@ $(document).ready(function () {
 	/* ####################### */
 	/* ####################### */
 	// EXPANDIR BUSCA
-	$('.filtros-mobile').on('click', function () {
+	$('.filtros-mobile').click(function () {
 		$('.form-busca').css({
 			'height': 'auto',
 			'margin-bottom': '0'
@@ -382,23 +394,20 @@ $(document).ready(function () {
 	if ($('.owl-home-single').length > 0) {
 		$('.owl-home-single').owlCarousel({
 			margin: 10,
-			loop: true,
+			loop: false,
 			dots: true,
 			nav: false,
+			lazyLoad: true,
 			items: 1,
-			autoplay: true,
-			autoplayTimeout: 8000,
-			autoplayHoverPause: true,
-			lazyLoad: true
 		});
 	}
-
+	/* ####################### */
+	/* ####################### */
 	// OWL Busca
 	if ($('.owl-busca-single').length > 0) {
 		$('.owl-busca-single').owlCarousel({
 			margin: 10,
-			loop: true,
-			autoplay: false,
+			loop: false,
 			dots: false,
 			nav: true,
 			lazyLoad: true,
@@ -406,18 +415,6 @@ $(document).ready(function () {
 			navText: ['<svg fill="#ffffff" width="18" height="18" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M23.505 0c0.271 0 0.549 0.107 0.757 0.316 0.417 0.417 0.417 1.098 0 1.515l-14.258 14.264 14.050 14.050c0.417 0.417 0.417 1.098 0 1.515s-1.098 0.417-1.515 0l-14.807-14.807c-0.417-0.417-0.417-1.098 0-1.515l15.015-15.022c0.208-0.208 0.486-0.316 0.757-0.316z"></path></svg>', '<svg fill="#ffffff" width="18" height="18" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M8.489 31.975c-0.271 0-0.549-0.107-0.757-0.316-0.417-0.417-0.417-1.098 0-1.515l14.258-14.264-14.050-14.050c-0.417-0.417-0.417-1.098 0-1.515s1.098-0.417 1.515 0l14.807 14.807c0.417 0.417 0.417 1.098 0 1.515l-15.015 15.022c-0.208 0.208-0.486 0.316-0.757 0.316z"></path></svg>']
 		});
 	}
-	/* ####################### */
-	/* ####################### */
-	// TABS DA HOME
-	$(".nav-cards a").on('click', function (e) {
-		var tabId = $(this).attr('href');
-		if (tabId.startsWith("#")) {
-			e.preventDefault();
-			$('.nav-cards a, .tab-navs').removeClass('ativo')
-			$(this).addClass('ativo');
-			$('.tab-navs' + tabId).addClass('ativo');
-		}
-	});
 	/* ####################### */
 	/* ####################### */
 	// ANCORA DESLIZANTE
@@ -430,7 +427,7 @@ $(document).ready(function () {
 	$('#modo').multiselect({
 		nonSelectedText: 'Alugar ou comprar?',
 		templates: {
-			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="4" height="18" rx="2" fill="#1d4db0"/></svg><span class="s"><small class="multiselect-text se"></small></span></button>'
+			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><span class="s"><small class="multiselect-text se"></small></span></button>'
 		}
 	});
 	$('#cidade').multiselect({
@@ -454,13 +451,19 @@ $(document).ready(function () {
 	$('#infra').multiselect({
 		nonSelectedText: 'Infraestrutura',
 		templates: {
-			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="4" height="18" rx="2" fill="#1d4db0"/></svg><span class="s"><small class="multiselect-text se"></small></span></button>'
+			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><span class="s"><small class="multiselect-text se"></small></span></button>'
 		}
 	});
 	$('#area').multiselect({
 		nonSelectedText: 'Área mínima',
 		templates: {
-			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.93 19.99"><g id="Camada_2" data-name="Camada 2"><g id="Layer_1" data-name="Layer 1"><path class="cls-1" d="M10,2.8c2.14,0,4.28,0,6.41,0,.64,0,.81.22.81.82q0,6.33,0,12.66c0,.68-.15,1-.91,1q-6.26-.06-12.51,0c-.73,0-1-.17-1-.95,0-4.2,0-8.39,0-12.59,0-.68.19-.9.88-.89C5.74,2.83,7.85,2.8,10,2.8ZM3.54,16.36H16.35V3.62H3.54Z"/><path class="cls-1" d="M19,3.56c-.16,0-.34.06-.46,0A3,3,0,0,1,18,3.12a1.93,1.93,0,0,1,.53-.31,2,2,0,0,1,.77,0,2.68,2.68,0,0,1,.6.32,6.14,6.14,0,0,1-.61.43c-.07,0-.2,0-.3,0Z"/><path class="cls-1" d="M18.94,17.19a1.33,1.33,0,0,1-.53,0,.71.71,0,0,1-.36-.4c0-.08.21-.3.34-.32a3.42,3.42,0,0,1,1,0c.19,0,.35.21.53.32a3,3,0,0,1-.52.43,1.22,1.22,0,0,1-.47,0Z"/><path class="cls-1" d="M16.3,19c.14-.32.3-.9.44-.9.61,0,.38.58.43,1a.65.65,0,0,1,0,.31c-.11.22-.25.44-.38.65-.12-.21-.25-.43-.36-.65s0-.21,0-.31Z"/><path class="cls-1" d="M1,3.56a1.17,1.17,0,0,1-.46,0A3,3,0,0,1,0,3.13a1.78,1.78,0,0,1,.52-.32,2,2,0,0,1,.77,0,2.55,2.55,0,0,1,.61.32c-.21.14-.4.3-.62.43s-.2,0-.3,0Z"/><path class="cls-1" d="M1,16.44a1.62,1.62,0,0,1,.54,0c.14.05.36.25.34.32a.59.59,0,0,1-.35.4,2.43,2.43,0,0,1-.93,0A2.09,2.09,0,0,1,0,16.84a5,5,0,0,1,.61-.41,1,1,0,0,1,.38,0Z"/><path class="cls-1" d="M3.64,19.06,3.16,20c-.14-.35-.28-.69-.4-1a.41.41,0,0,1,0-.31c.1-.21.24-.4.36-.6a5,5,0,0,1,.37.57,1,1,0,0,1,0,.39Z"/><path class="cls-1" d="M3.5,1a1.61,1.61,0,0,1,0,.54c-.06.16-.24.26-.36.39-.12-.11-.31-.21-.33-.34a3.06,3.06,0,0,1,0-1c0-.21.25-.38.38-.56A5,5,0,0,1,3.5.59a1,1,0,0,1,0,.38Z"/><path class="cls-1" d="M16.42,1a1.94,1.94,0,0,1,0-.54A1.74,1.74,0,0,1,16.77,0c.13.16.34.3.38.47a2.64,2.64,0,0,1,0,.93c0,.18-.23.33-.34.5a4,4,0,0,1-.38-.54,1,1,0,0,1,0-.38Z"/></g></g></svg><span class="s"><small class="multiselect-text se"></small></span></button>'
+			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><span class="s"><small class="multiselect-text se"></small></span></button>'
+		}
+	});
+	$('#quartos').multiselect({
+		nonSelectedText: 'Quartos',
+		templates: {
+			button: '<button type="button" class="btn" data-bs-toggle="dropdown"><span class="multiselect"><span class="s"><small class="multiselect-text se"></small></span></button>'
 		}
 	});
 	/* ####################### */
@@ -527,67 +530,6 @@ $(document).ready(function () {
 						} else {
 							$('.link-favoritos').addClass('leadlink');
 							$('.bt-fav.link-favoritos small').html(retorno[1]);
-						}
-						/* ####################### */
-					} else {
-						alert('Ocorreu um erro, tente novamente!');
-					}
-				}
-			});
-			/* ####################### */
-			/* ####################### */
-		}
-	);
-	/* ####################### */
-	/* ####################### */
-	// FAVORITOS DENTRO DO IMÓVEL
-	$(".ifav").on('click',
-		function (e) {
-			/* ####################### */
-			/* ####################### */
-			e.preventDefault();
-			var id = $(this).attr('id');
-			var codigo = $(this).attr('data-codigo');
-			/* ####################### */
-			/* ####################### */
-			$.ajax({
-				headers: { 'X-Requested-With': 'XMLHttpRequest' },
-				url: CAMINHO + "envio/favoritos/",
-				type: "POST",
-				async: false,
-				data: 'codigo=' + id,
-				success: function (resposta) {
-					var retorno = resposta.split('-');
-					if (retorno[0] == '1') {
-						$('#' + id).addClass('ok');
-						$('#' + id).attr('title', 'Remover Cod.: ' + codigo + ' dos Favoritos');
-						$('#' + id + ' span').html('REMOVER');
-						/* ####################### */
-						if (retorno[1] > 0) {
-							$('#topo-favoritos').removeClass('leadlink');
-							$('#topo-favoritos small').html(retorno[1]);
-						} else {
-							$('#topo-favoritos').addClass('leadlink');
-							$('#topo-favoritos small').html(retorno[1]);
-						}
-						/* ####################### */
-					} else if (retorno[0] == '2') {
-						$('#' + id).removeClass('ok');
-						$('#' + id).attr('title', 'Adicionar Cod.: ' + codigo + ' aos Favoritos');
-						$('#' + id + ' span').html('FAVORITAR');
-						var rem = '#favorito_' + id;
-						/* ####################### */
-						// REMOVE DA PAGINA DOS FAVORITOS
-						if ($(rem).length > 0) {
-							$(rem).fadeOut(800, "swing");
-						}
-						/* ####################### */
-						if (retorno[1] > 0) {
-							$('#topo-favoritos').removeClass('leadlink');
-							$('#topo-favoritos small').html(retorno[1]);
-						} else {
-							$('#topo-favoritos').addClass('leadlink');
-							$('#topo-favoritos small').html(retorno[1]);
 						}
 						/* ####################### */
 					} else {

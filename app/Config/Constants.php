@@ -2,9 +2,9 @@
 
 ##########################################################
 ##########################################################
-define('REFERENCIA', 'frprime');
-define('CIDADE','Volta Redonda');
-define('DOMINIO','frprime.leadlink.com.br');
+define('REFERENCIA', 'pedromariano');
+define('CIDADE','São Bernardo do Campo');
+define('DOMINIO','pedromariano.com.br');
 define('ORIGEM',array('facebook','google','instagram','insta','youtube','linkedin','meta','googleinst','organico'));
 define('TIMEOUT','10');
 define('ADMLIMITE','100');
