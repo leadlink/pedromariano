@@ -1,0 +1,3 @@
+<Files ci/*>
+    deny from all
+</Files>
