@@ -87,7 +87,7 @@ class Vista{
 		#############################################
 	}
 
-	function Campos(){
+	function Campos( $dado = 'full' ){
 		#############################################
 		#############################################
 		$url = 'https://'.$this->vista_usr.'-rest.vistahost.com.br/imoveis/listarcampos?key='.$this->vista_key;
@@ -98,9 +98,20 @@ class Vista{
 		$result = curl_exec( $ch );
 
 		$result = json_decode( $result, true );
-		$resultado = arrayToObject($result);
 
-		return $result;
+		if( $dado == 'imovel' ){
+			$fields = array();
+
+			foreach( $result['imoveis'] as $row ){
+				array_push($fields,$row);
+			}
+
+			$resultado = implode('","',$fields);
+		}else{
+			$resultado = $result;
+		}
+
+		return $resultado;
 		#############################################
 		#############################################
 	}
@@ -312,38 +323,41 @@ class Vista{
 		$url = 'https://'.$this->vista_usr.'-rest.vistahost.com.br/imoveis/listar?key='.$this->vista_key;
 		$url.= '&pesquisa={"filter":{"Codigo":"'.$codigo.'"},"fields":[';
 
-		$url.= '"123iPublicationType","Aberturas","AceitaDacao","Adega","AdministradoraCondominio","Alarme","AndarDoApto","Andares",';
-		$url.= '"AnoConstrucao","AntenaParabolica","AptosAndar","AptosEdificio","AreaBoxPrivativa","AreaBoxTotal","AreaPrivativa",';
-		$url.= '"AreaTotal","ArmarioEmbutido","Bairro","BairroComercial","BanheiroSocial","BanheiroSocialQtd","Bar","Bloco",';
-		$url.= '"Calefacao","Campanha","CampanhaImportacao","Canil","Categoria","CEP","Chave","ChaveNaAgencia","Cidade",';
-		$url.= '"ClasseDoImovel","Closet","Complemento","ConstrucaoAlvenaria","ConstrucaoMista","CorretorDaPlaca",';
-		$url.= '"CorretorPrimeiroAge","CozinhaAmericana","CozinhaComTanque","DataAtualizacao","DataCadastro",';
-		$url.= '"DataDisponibilizacao","DataEntrega","DataFimAutorizacao","DataImportacao","DataInicioAutorizacao",';
-		$url.= '"DataInicioCampanha","DataLancamento","DataPlaca","Descricao","DescricaoEmpreendimento","DescricaoWeb",';
-		$url.= '"DestaqueWeb","DimensoesTerreno","DivulgarEndereco123i","DivulgarEnderecoLoft","Dormitorios","Edificio",';
-		$url.= '"EdificioResidencial","EEmpreendimento","Elevadores","EmitiuNotaFiscalComissao","EmpOrulo","Empreendimento",';
-		$url.= '"Endereco","EnergiaEletrica","EntradaServicoIndependente","EsperaSplit","Estacionamento","EstacionamentoVagas",';
-		$url.= '"EstadoConservacaoEdificio","EstadoConservacaoImovel","Exclusivo","ExclusivoCorretor","ExibirComentarios",';
-		$url.= '"ExibirNoSite","Face","Fachada","Finalidade","Garagem","GaragemCoberta","GaragemNumeroBox","GaragemTipo",';
-		$url.= '"GeradorEnergia","Iluminacao","Imediacoes","ImovelwebModelo","Incompleto","Incorporadora","InformacaoVenda",';
-		$url.= '"InicioObra","InscricaoMunicipal","JardimInverno","Junker","Lancamento","Latitude","Leste","Limpeza","Living",';
-		$url.= '"LivingAmbientes","LocacaoAnual","LocacaoTemporada","LoftPublicationType","LojasEdificio","Longitude","Lote",';
-		$url.= '"Marquise","Matricula","MesConstrucao","Mezanino","Midia","Mobiliado","Norte","Numero","Observacoes","ObsLocacao",';
-		$url.= '"ObsVenda","Ocupacao","Oeste","OLXFinalidadesPublicadas","OnibusProximo","Orientacao","Orulo","PadraoConstrucao",';
-		$url.= '"Pais","PercentualComissao","Piso","PisoAreaIntima","PistaCaminhada","Plantao","PlantaoNoLocal","PocoArtesiano",';
-		$url.= '"Porao","PorteEstrutural","PosicaoAndar","PrazoDesocupacao","ProjetoArquitetonico","Proposta","PropostaLocacao",';
-		$url.= '"QuadraPoliEsportiva","QuadraTenis","Reajuste","RedeEsgoto","Referencia","Regiao","ResponsavelReserva",';
-		$url.= '"SacadaComChurrasqueira","Sala","SalaConvecoes","SalaEstar","SalaJantar","SalaoBrinquedo","SalasEdificio",';
-		$url.= '"Setor","Situacao","Status","Suites","Sul","SummerSale","SuperDestaqueWeb","TemPlaca","Terreo","TextoAnuncio",';
-		$url.= '"TipoEndereco","TipoImovel","TituloSite","Topografia","TotalComissao","TVCabo","UF","Vagas","ValorACombinar",';
-		$url.= '"ValorAnterior","ValorComissao","ValorCondominio","ValorDiaria","ValorIptu","ValorLimpeza","ValorLivreProprietario",';
-		$url.= '"ValorLocacao","ValorOferta","ValorPortal","ValorPromocional","ValorVenda","Varanda","Venda","Vigilancia24Horas",';
+		$url.= '"123iPublicationType","Aberturas","AceitaDacao","AceitaFinanciamento","AceitaPermuta","AceitaPermutaCarro","AceitaPermutaOutro",';
+		$url.= '"AceitaPermutaTipoVeiculo","AcessoDeficientes","AdministradoraCondominio","AlugarJaDestaque","AndarDoApto","Andares","AnoConstrucao",';
+		$url.= '"AnoMinimoVeicPermuta","AptosAndar","AptosEdificio","AreaArmazem","AreaBoxPrivativa","AreaBoxTotal","AreaConstruida","AreaEscritorio",';
+		$url.= '"AreaLaje","AreaLocavel","AreaMezanino","AreaPrivativa","AreaTerreno","AreaTotal","Bairro","BairroComercial","BanheiroSocialQtd",';
+		$url.= '"Bloco","CampanhaImportacao","CasaMineiraModelo","Categoria","CEP","Chave","ChaveNaAgencia","ChavesNaMaoDestaque","Cidade",';
+		$url.= '"ClasseDoImovel","Closet","Closets","CodigoDWV","CodigoMalote","Complemento","ComplementoMigrado","Conjutos","Construtora",';
+		$url.= '"CorretorPrimeiroAge","DataAtualizacao","DataCadastro","DataDisponibilizacao","DataEntrega","DataFimAutorizacao","DataImportacao",';
+		$url.= '"DataInicioAutorizacao","DataLancamento","DataVencimentoContrato","DescricaoEmpreendimento","DescricaoWeb","DestaquePetropolisImoveis",';
+		$url.= '"DestaqueWeb","DimensoesTerreno","DivulgarEndereco123i","DivulgarEnderecoLoft","Dormitorios","EEmpreendimento","Elevadores",';
+		$url.= '"EmitiuNotaFiscalComissao","EmpOrulo","Empreendimento","Endereco","EstacionamentoVagas","EstadoConservacaoEdificio",';
+		$url.= '"EstadoConservacaoImovel","Exclusivo","ExclusivoCorretor","ExibirComentarios","ExibirNoSite","Face","Fachada","Finalidade","FolhaSPModelo",';
+		$url.= '"FormatodoGalpao","Frente","Fundos","GaragemNumeroBox","GaragemTipo","GaragemTipo2","GaragemTipo3","GaragemTipo4","GrupoSPTipoOferta",';
+		$url.= '"HidroSuite","HoraDomFim","HoraDomInicio","HoraFerFim","HoraFerInicio","HoraSabFim","HoraSabInicio","HoraSegSexFim","HoraSegSexInicio",';
+		$url.= '"IdadeImovel","Iluminacao","Imediacoes","ImovelaVendaDestaqueImovelaVenda","ImovelDWV","ImovelwebModelo","ImovelwebTipoPublicacao",';
+		$url.= '"ImportadoMalote","Incompleto","Incorporadora","InformacaoVenda","InicioObra","InscricaoGas","InscricaoIptu","InscricaoIptuGaragem",';
+		$url.= '"InscricaoMunicipal","KeywordsWeb","Lancamento","Latitude","Limpeza","ListingId","LivingAmbientes","LocacaoAnual","LocacaoTemporada",';
+		$url.= '"LocalCargaEDescarga","LocalizacaoPermuta","LoftPublicationType","LojasEdificio","Longitude","Lote","LugarCertoDestaqueLugarCerto",';
+		$url.= '"Matricula","MercadoLivreTipoML","MesConstrucao","Midia","Modulos","NomeBloco","Numero","NumeroEnergiaEletrica","NumeroHidrometro",';
+		$url.= '"Observacoes","ObsLocacao","ObsVenda","Ocupacao","OLXFinalidadesPublicadas","Orientacao","Orulo","PadraoConstrucao","Pais","Pavimentos",';
+		$url.= '"PeDireitoAlto","PercentualComissao","Piso","PisoAreaIntima","PisoDormitorio","PisoSala","Plantao","PlantaoNoLocal","PorteEstrutural",';
+		$url.= '"PortfolioUnico","Posicao","PosicaoAndar","PotenciaKVA","PrazoDesocupacao","Prestacao","ProjetoArquitetonico","Proposta",';
+		$url.= '"PropostaLocacao","QntDormitoriosPermuta","QntGaragensPermuta","QntSuitesPermuta","QTDGalpoes","QtdVarandas","Quadra","Reajuste",';
+		$url.= '"Referencia","Regiao","ResponsavelReserva","Salas","SalasEdificio","SaldoDivida","SemVaga","Setor","Situacao","Status","Suites",';
+		$url.= '"SummerSale","SuperDestaqueWeb","TemPlaca","TemTourVirtual","TextoAnuncio","TipoEndereco","TipoImovel","TipoImovelPermuta",';
+		$url.= '"TipoOferta321Achei","TipoTeto","TiqueImoveisEmDestaque","TituloSite","Topografia","TotalComissao","UF","UnitId","URLVideo","UrlVisita",';
+		$url.= '"VagaDescoberta","Vagas","VagasCobertas","VagasDescobertas","VagasPrincipais","VagasSecundarias","ValorACombinar","ValorAluguelPorM2",';
+		$url.= '"ValorComissao","ValorCondominio","ValorCondominioM2","ValorDiaria","ValorIptu","ValorIPTUM2","ValorLimpeza",';
+		$url.= '"ValorLocacao","ValorLocacaoM2","ValorM2","ValorPermutaImovel","ValorTotalAluguel","ValorVenda","ValorVendaM2","Varanda","Venda",';
 		$url.= '"Visita","VisitaAcompanhada","VivaRealDestaqueVivaReal","VivaRealDivulgarEnderecoVivaReal","VivaRealPublicationType",';
-		$url.= '"WebEscritoriosDestaque","ZapTipoOferta","ZeladorNome","ZeladorTelefone","Zona","CategoriaImovel","CategoriaMestre",';
-		$url.= '"CategoriaGrupo","ImoCodigo","Moeda","ConverterMoeda","MoedaIndice","CodigoEmpresa","CodigoEmp","CodigoEmpreendimento",';
-		$url.= '"CodigoCategoria","CodigoMoeda","DataHoraAtualizacao","VideoDestaque","VideoDestaqueTipo","FotoDestaque","FotoDestaquePequena",';
-		$url.= '"FotoDestaqueEmpreendimento","FotoDestaqueEmpreendimentoPequena","Agenciador","CorretorNome","CodigoCorretor",';
-		$url.= '"CodigoAgencia","TotalBanheiros","Caracteristicas","InfraEstrutura",';
+		$url.= '"WebEscritoriosDestaque","ZapTipoOferta","ZeladorNome","ZeladorTelefone","Zona","CategoriaImovel","CategoriaMestre","CategoriaGrupo",';
+		$url.= '"ImoCodigo","Moeda","ConverterMoeda","MoedaIndice","CodigoEmpresa","CodigoEmp","CodigoEmpreendimento","CodigoCategoria",';
+		$url.= '"CodigoMoeda","CodigoProprietario","DataHoraAtualizacao","VideoDestaque","VideoDestaqueTipo","FotoDestaque","FotoDestaquePequena",';
+		$url.= '"FotoDestaqueEmpreendimento","FotoDestaqueEmpreendimentoPequena","Agenciador","CorretorNome","CodigoCorretor","CaptadorAccountId",';
+		$url.= '"AssuntoProntuario","PendenteProntuario","EstadoProntuario","DataInicioProntuario","DataProntuario","CodigoAgencia",';
+		$url.= '"TotalBanheiros","Caracteristicas","InfraEstrutura",';
 
 		$url.= '{"Corretor":["Nascimento","Nacionalidade","CNH","Celular","Endereco","Bairro","Cidade","UF","CEP","Pais","Fone","Fax","Email","Nome","Observacoes",';
 		$url.= '"Codigo","Celular1","Celular2","Corretor","Nomecompleto","Ramal","Sexo","Exibirnosite","Inativo","CRECI","Estadocivil","Foto","Tipo","CodigoAgencia","Agencia"]}';

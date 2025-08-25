@@ -1,7 +1,7 @@
 /* @Cores */
 @primaria: #ed1c24;
 @secundaria: #f27321;
-@texto: #3d4042;
+@texto: #212121;
 @cinza: #999;
 @vermelho: #a1090f;
 @prata: #CCC;
@@ -141,7 +141,7 @@
 		-webkit-backdrop-filter: blur(15px);
 
 		a {
-			color: #fff;
+			color: @branco;
 		}
 
 		.prime {
@@ -173,8 +173,8 @@
 
 	.flag {
 		border-radius: 35px;
-		background-color: #212121;
-		color: #fff;
+		background-color: @texto;
+		color: @branco;
 		line-height: 1.2;
 		font-size: 0.7rem;
 		padding: 0.3rem .8rem;
@@ -192,9 +192,9 @@
 		font-weight: 500;
 		height: 44px;
 
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
+		display: flex;
+		flex-direction: column;
 		overflow: hidden;
 		text-overflow: ellipsis;
 
@@ -267,7 +267,7 @@
 		position: absolute;
 		top: 15px;
 		right: 30px;
-		background: #fff;
+		background: @branco;
 		z-index: 4;
 		border-radius: 100%;
 		width: 35px;
@@ -347,7 +347,7 @@
 	}
 
 	.sobre-banner {
-		background: #000000;
+		background: @preto;
 		background: linear-gradient(40deg, rgba(0, 0, 0, 0.77) 0%, rgba(237, 221, 83, 0) 50%);
 		position: absolute;
 		top: 0;
@@ -360,7 +360,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: end;
-		color: #fff;
+		color: @branco;
 
 		h2 {
 			display: block;
@@ -441,7 +441,7 @@
 			background: #202020;
 
 			a {
-				color: #fff;
+				color: @branco;
 			}
 		}
 	}
@@ -517,7 +517,7 @@ footer {
 
 	.newsfooter {
 		background: #202020;
-		color: #fff;
+		color: @branco;
 		padding: 2rem 3.5rem 4rem;
 		border-radius: 28px 28px 0 0;
 
@@ -704,7 +704,7 @@ footer {
 }
 
 .form-news {
-	background-color: #fff;
+	background-color: @branco;
 	color: #202020;
 	border-radius: 8px;
 
@@ -731,7 +731,7 @@ footer {
 
 	input[type=submit] {
 		background-color: @primaria;
-		color: #fff;
+		color: @branco;
 		margin-left: auto;
 		border-radius: 8px;
 		font-size: .8rem;
@@ -784,7 +784,7 @@ footer {
 	}
 
 	h1 {
-		color: #fff;
+		color: @branco;
 		font-weight: 300;
 		font-size: min(max(1.5rem, 4vw), 2rem);
 		margin: 0;
@@ -910,9 +910,13 @@ footer {
 	padding: 3rem 0;
 
 	.box-form {
-		background: #dedede;
+		background: @branco;
 		padding: 1.5rem;
 		border-radius: 12px;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -958,7 +962,7 @@ footer {
 // Trabalhe conosco
 .form-section {
 	background: #cf262a;
-	color: #fff;
+	color: @branco;
 	padding: 2.5rem 0 4rem;
 
 	.checks {
@@ -982,13 +986,13 @@ footer {
 	}
 
 	.box-destaque {
-		background: #fff;
+		background: @branco;
 		border-radius: 15px;
 	}
 
 	.title-form {
 		background: #202020;
-		color: #fff;
+		color: @branco;
 		border-radius: 15px 15px 0 0;
 		padding: 0 3rem;
 
@@ -1046,7 +1050,7 @@ footer {
 		border-radius: 10px;
 		padding: 0.6rem .5rem;
 		font-size: 0.7rem;
-		color: #fff;
+		color: @branco;
 		font-weight: 500;
 		justify-content: center;
 		border: none;
@@ -1056,7 +1060,7 @@ footer {
 
 		&:hover {
 			background: @secundaria;
-			color: #fff;
+			color: @branco;
 		}
 	}
 
@@ -1076,7 +1080,7 @@ footer {
 
 			small {
 				background: #393939;
-				color: #fff;
+				color: @branco;
 				padding: 0.3rem 1rem;
 				font-size: 0.7rem;
 				font-weight: 600;
@@ -1169,8 +1173,8 @@ footer {
 .form-section-anunciar {
 	.h2-traco {
 		hr {
-			border-color: #000;
-			background: #000;
+			border-color: @preto;
+			background: @preto;
 		}
 	}
 }
@@ -1316,7 +1320,7 @@ footer {
 	width: 2.8rem;
 	height: 1.4rem;
 	margin-left: auto;
-	background-color: #fff;
+	background-color: @branco;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -1341,7 +1345,7 @@ footer {
 }
 
 .form-check-input:checked {
-	background-color: #fff;
+	background-color: @branco;
 }
 
 .form-check-input:checked::before {
@@ -1422,7 +1426,7 @@ footer {
 			border-color: @secundaria;
 
 			path {
-				fill: #fff;
+				fill: @branco;
 			}
 		}
 	}
@@ -1438,7 +1442,7 @@ footer {
 
 .check-quartos {
 	width: 100%;
-	background: #fff;
+	background: @branco;
 	border: 1px solid #c4c4c4;
 	border-radius: 5px;
 
@@ -1460,7 +1464,7 @@ footer {
 		&:checked+label,
 		+label:hover {
 			border-color: @secundaria;
-			color: #fff;
+			color: @branco;
 			background: @secundaria;
 		}
 	}
@@ -1585,7 +1589,7 @@ footer {
 			border-radius: 10px;
 			min-width: auto;
 			background-color: #fae9e9;
-			color: #ffffff;
+			color: @branco;
 			display: inline-flex;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -1597,7 +1601,7 @@ footer {
 				display: block;
 				font-size: 1rem;
 				margin-top: .2rem;
-				color: #212121;
+				color: @texto;
 				font-weight: 400;
 				width: 100%;
 			}
@@ -1612,11 +1616,11 @@ footer {
 		&:checked+label,
 		+label:hover {
 			background-color: #cf262a;
-			color: #fff;
+			color: @branco;
 
 			span,
 			small {
-				color: #fff;
+				color: @branco;
 			}
 		}
 	}
@@ -1627,7 +1631,7 @@ footer {
 			width: 100%;
 			border-radius: 5px;
 			border: none;
-			background: #fff;
+			background: @branco;
 			padding: 0.3rem;
 			margin-top: 0.4rem;
 		}
@@ -1693,7 +1697,7 @@ footer {
 
 		a {
 			display: flex;
-			background: #fff;
+			background: @branco;
 			align-items: center;
 			padding: 0.5rem .8rem;
 			gap: 0.4rem;
@@ -1912,7 +1916,7 @@ footer {
 
 				span {
 					font-size: .8rem;
-					background-color: #fff;
+					background-color: @branco;
 					display: flex;
 					align-items: center;
 					justify-content: center;

@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'da5.srvhr.com.br',
-        'username'     => 'frprime_site',
-        'password'     => 'fc2tPnSEyd6e8xHdphuM',
-        'database'     => 'frprime_site',
+        'username'     => 'pedromar_site',
+        'password'     => 'gmbyv29RTzUhkUw9HtKf',
+        'database'     => 'pedromar_site',
 		'port'         => 3306,
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',

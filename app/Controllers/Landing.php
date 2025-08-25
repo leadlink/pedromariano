@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-class Avaliar extends BaseController{
+class Landing extends BaseController{
 
     public function index($origem = NULL){
         ############################################
@@ -21,14 +21,24 @@ class Avaliar extends BaseController{
         ############################################
 		############################################
 		## CONFIGURAÇÕES DA PÁGINA
-		$dados['secao'] = $this->SiteModel->getRegistro('tb_secoes','id','3');
+		$dados['secao'] = $this->SiteModel->getRegistro('tb_secoes','id','9');
 		$dados['titulo'] = $dados['secao']->titulo.' - '.$dados['config']->titulo;
 		$dados['descricao'] = Redutor($dados['secao']->descricao,250);
 		$dados['keywords'] = SetNulo($dados['secao']->keywords);
 		$dados['robots'] = $dados['robots'];
 		############################################
 		############################################
-        return view('site/avaliar/index', $dados);
+		## DEPOIMENTOS
+		$dados['depoimentos'] = $this->SiteModel->getRegs('tb_depoimentos',array(
+			'order_by' => array(
+				'key' => 'nome',
+				'dir' => 'asc'
+			),
+			'status' => '1'
+		));
+		############################################
+		############################################
+        return view('site/landing/index', $dados);
         ############################################
 		############################################
     }

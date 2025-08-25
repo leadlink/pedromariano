@@ -16,26 +16,21 @@ $routes->get('(facebook|google|instagram|insta|youtube|linkedin|meta|googleinst)
 ## PAGINAS DO SITE
 $routes->get('anuncie-seu-imovel', 'Anuncie::index');
 $routes->get('avaliar-imovel-gratis', 'Avaliar::index');
-$routes->get('condominios', 'Condominios::index');
 $routes->get('fale-conosco', 'Contato::index');
-$routes->get('depoimentos', 'Depoimentos::index');
+$routes->get('financiamento', 'Financiamento::index');
 $routes->get('empresa', 'Empresa::index');
 $routes->get('favoritos', 'Favoritos::index');
 $routes->get('lancamentos', 'Lancamentos::index');
-$routes->get('perguntas-frequentes', 'Perguntas::index');
+$routes->get('servicos', 'Servicos::index');
 $routes->get('politica-de-privacidade', 'Privacidade::index');
 $routes->get('trabalhe-conosco', 'Trabalhe::index');
+$routes->get('landing', 'Landing::index');
 ## REDIRECTS
-$routes->get('avalie-seu-corretor', 'Redirect::avalie');
-$routes->get('cadastre-seu-imovel', 'Redirect::cadastre');
-$routes->get('encomende-seu-imovel', 'Redirect::encomende');
-$routes->get('financiamento-e-bancos', 'Redirect::financiamento');
-$routes->get('minha-casa-minha-vida', 'Redirect::minhacasa');
-$routes->get('quem-somos', 'Redirect::empresa');
-$routes->get('imoveis/para-alugar/(:any)', 'Redirect::locacao');
-$routes->get('imoveis/para-alugar', 'Redirect::locacao');
-$routes->get('imoveis/a-venda/(:any)', 'Redirect::venda');
-$routes->get('imoveis/a-venda', 'Redirect::venda');
+$routes->get('encontre-seu-imovel', 'Redirect::index');
+$routes->get('sobre', 'Redirect::empresa');
+$routes->get('contato', 'Redirect::contato');
+$routes->get('busca/(:any)Aluguel(:any)', 'Redirect::locacao');
+$routes->get('busca/(:any)Venda(:any)', 'Redirect::venda');
 ##################################################################################
 ##################################################################################
 ## FOTOS

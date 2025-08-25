@@ -4,14 +4,17 @@
     <?php echo view('site/inc/topo'); ?>
     <!-- ################################ -->
     <!-- ################################ -->
-    <section class="fleft100 empresa internas">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 title-sc-home mt-3">
-                    <h1 class="h2-home"><?php echo $secao->titulo; ?></h1>
-                </div>
+    <section class="fleft100 avalie">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="h2-traco">
+						<span><?php echo $secao->titulo; ?></span>
+						<hr>
+					</h2>
+				</div>
 
-                <div class="col-lg-9 col-12 mt-3 mb-5">
+                <div class="col-12 mt-3 mb-5">
                     <p>A privacidade dos visitantes do site da <?php echo $config->titulo; ?> é muito importante para nós. Esta página descreve quais informações pessoais coletamos e como as utilizamos.</p>
                     <br />
                     <p><strong>Coleta de Informações</strong><br>Quando você visita nosso site, podemos coletar informações sobre seu navegador, endereço IP e páginas visitadas. Também podemos armazenar informações fornecidas voluntariamente, como nome, email, telefone e preferências de imóveis.</p>
@@ -26,9 +29,9 @@
                     <br />
                     <p><strong>Contato</strong><br>Se você tiver alguma dúvida sobre nossa política de privacidade, entre em contato conosco pela página de <a href="<?php echo base_url(); ?>contato/" title="Fale Conosco">Fale Conosco</a>.</p>
                 </div>
-            </div>
-        </div>
-    </section>
+			</div>
+		</div>
+	</section>
     <!-- ################################ -->
     <!-- ################################ -->
 <?php echo view('site/inc/rodape'); ?>

@@ -21,7 +21,7 @@ class Acao extends BaseController{
 		############################################
         header('Content-Type: text/html; charset=utf-8');
         $sessao = $this->session->get('session_id');
-        $form_start = $this->session->get('FrP41me_formstart');
+        $form_start = $this->session->get('P3dr0m4RiaNo_formstart');
 		$form_submit = microtime(true);
 		$_POST['usuario'] = getUserIP();
 		$_POST['nome'] = ConvertCase($_POST['nome']);
@@ -46,9 +46,9 @@ class Acao extends BaseController{
 			############################################
 			############################################
 			// GRAVA NA SESSION OS DADOS DO USUÁRIO
-			$this->session->set('FrP41me_nome', $_POST['nome']);
-			$this->session->set('FrP41me_email', $_POST['email']);
-			$this->session->set('FrP41me_fone', $_POST['telefone']);
+			$this->session->set('P3dr0m4RiaNo_nome', $_POST['nome']);
+			$this->session->set('P3dr0m4RiaNo_email', $_POST['email']);
+			$this->session->set('P3dr0m4RiaNo_fone', $_POST['telefone']);
 			############################################
 			############################################
 			// SALVA NO BD
@@ -104,8 +104,8 @@ class Acao extends BaseController{
 			$mail->SetFrom(SMTP_EMAIL, ConvertUTF($info['nome']) );
 			############################################
 			############################################
-			$mail->AddAddress("rodrigo+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
-			$mail->AddAddress("danton+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
+			$mail->AddAddress("rdzdigital@gmail.com",ConvertUTF($this->sitenome) );
+			//$mail->AddAddress("danton+pedromariano@leadlink.com.br",ConvertUTF($this->sitenome) );
 			############################################
 			############################################
 			if( !empty($_POST['cor_nome']) && !empty($_POST['cor_email']) ){
@@ -114,16 +114,16 @@ class Acao extends BaseController{
 			############################################
 			############################################
 			if( $mail->Send() ){
-                //$this->session->set('FrP41me_status','ok');
+                //$this->session->set('P3dr0m4RiaNo_status','ok');
 				Redireciona($_POST['whatslink'].$_POST['whatstexto']);
 			}else{
-				$this->session->set('FrP41me_status','no');
+				$this->session->set('P3dr0m4RiaNo_status','no');
 				Redireciona($_POST['redirect']);
 			}
             ############################################
 		    ############################################
 		}else{
-			$this->session->set('FrP41me_status','erro');
+			$this->session->set('P3dr0m4RiaNo_status','erro');
 			Redireciona($_POST['redirect']);
 		}
         ############################################
@@ -137,7 +137,7 @@ class Acao extends BaseController{
 		############################################
         header('Content-Type: text/html; charset=utf-8');
         $sessao = $this->session->get('session_id');
-        $form_start = $this->session->get('FrP41me_formstart');
+        $form_start = $this->session->get('P3dr0m4RiaNo_formstart');
 		$form_submit = microtime(true);
 		$_POST['usuario'] = getUserIP();
 		$_POST['nome'] = ConvertCase($_POST['nome']);
@@ -163,9 +163,9 @@ class Acao extends BaseController{
 			############################################
 			############################################
 			// GRAVA NA SESSION COM NOME E E-MAIL
-			$this->session->set('FrP41me_nome', $_POST['nome']);
-			$this->session->set('FrP41me_email', $_POST['email']);
-			$this->session->set('FrP41me_fone', $_POST['telefone']);
+			$this->session->set('P3dr0m4RiaNo_nome', $_POST['nome']);
+			$this->session->set('P3dr0m4RiaNo_email', $_POST['email']);
+			$this->session->set('P3dr0m4RiaNo_fone', $_POST['telefone']);
 			############################################
 			############################################
 			// SALVA NO BD
@@ -225,21 +225,21 @@ class Acao extends BaseController{
 			//$mail->AddAddress("rodrigo@leadlink.com.br",ConvertUTF("Lead Link") );
 			############################################
 			############################################
-			$mail->AddAddress("rodrigo+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
-			$mail->AddAddress("danton+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
+			$mail->AddAddress("rdzdigital@gmail.com",ConvertUTF($this->sitenome) );
+			//$mail->AddAddress("danton+pedromariano@leadlink.com.br",ConvertUTF($this->sitenome) );
 			############################################
 			############################################
 			if( $mail->Send() ){
-				$this->session->set('FrP41me_status','ok');
+				$this->session->set('P3dr0m4RiaNo_status','ok');
 				Redireciona($_POST['redirect']);
 			}else{
-				$this->session->set('FrP41me_status','no');
+				$this->session->set('P3dr0m4RiaNo_status','no');
 				Redireciona($_POST['redirect']);
 			}
             ############################################
 		    ############################################
 		}else{
-			$this->session->set('FrP41me_status','erro');
+			$this->session->set('P3dr0m4RiaNo_status','erro');
 			Redireciona($_POST['redirect']);
 		}
         ############################################
@@ -253,7 +253,7 @@ class Acao extends BaseController{
 		############################################
         header('Content-Type: text/html; charset=utf-8');
         $sessao = $this->session->get('session_id');
-        $form_start = $this->session->get('FrP41me_formstart');
+        $form_start = $this->session->get('P3dr0m4RiaNo_formstart');
 		$form_submit = microtime(true);
 		$_POST['usuario'] = getUserIP();
 		$_POST['nome'] = ConvertCase($_POST['nome']);
@@ -281,9 +281,9 @@ class Acao extends BaseController{
 			############################################
 			############################################
 			// GRAVA NA SESSION COM NOME E E-MAIL
-			$this->session->set('FrP41me_nome', $_POST['nome']);
-			$this->session->set('FrP41me_email', $_POST['email']);
-			$this->session->set('FrP41me_fone', $_POST['telefone']);
+			$this->session->set('P3dr0m4RiaNo_nome', $_POST['nome']);
+			$this->session->set('P3dr0m4RiaNo_email', $_POST['email']);
+			$this->session->set('P3dr0m4RiaNo_fone', $_POST['telefone']);
 			############################################
 			############################################
 			// SALVA NO BD
@@ -343,21 +343,21 @@ class Acao extends BaseController{
 			//$mail->AddAddress("rodrigo@leadlink.com.br",ConvertUTF("Lead Link") );
 			############################################
 			############################################
-			$mail->AddAddress("rodrigo+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
-			$mail->AddAddress("danton+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
+			$mail->AddAddress("rdzdigital@gmail.com",ConvertUTF($this->sitenome) );
+			//$mail->AddAddress("danton+pedromariano@leadlink.com.br",ConvertUTF($this->sitenome) );
 			############################################
 			############################################
 			if( $mail->Send() ){
-				$this->session->set('FrP41me_status','ok');
+				$this->session->set('P3dr0m4RiaNo_status','ok');
 				Redireciona($_POST['redirect']);
 			}else{
-				$this->session->set('FrP41me_status','no');
+				$this->session->set('P3dr0m4RiaNo_status','no');
 				Redireciona($_POST['redirect']);
 			}
             ############################################
 		    ############################################
 		}else{
-			$this->session->set('FrP41me_status','erro');
+			$this->session->set('P3dr0m4RiaNo_status','erro');
 			Redireciona($_POST['redirect']);
 		}
         ############################################
@@ -371,7 +371,7 @@ class Acao extends BaseController{
 		############################################
         header('Content-Type: text/html; charset=utf-8');
         $sessao = $this->session->get('session_id');
-        $form_start = $this->session->get('FrP41me_formstart');
+        $form_start = $this->session->get('P3dr0m4RiaNo_formstart');
 		$form_submit = microtime(true);
 		$_POST['usuario'] = getUserIP();
 		$_POST['nome'] = ConvertCase($_POST['nome']);
@@ -394,9 +394,9 @@ class Acao extends BaseController{
 			############################################
 			############################################
 			// GRAVA NA SESSION COM NOME E E-MAIL
-			$this->session->set('FrP41me_nome', $_POST['nome']);
-			$this->session->set('FrP41me_email', $_POST['email']);
-			$this->session->set('FrP41me_fone', $_POST['telefone']);
+			$this->session->set('P3dr0m4RiaNo_nome', $_POST['nome']);
+			$this->session->set('P3dr0m4RiaNo_email', $_POST['email']);
+			$this->session->set('P3dr0m4RiaNo_fone', $_POST['telefone']);
 			############################################
 			############################################
 			// SALVA NO BD
@@ -441,21 +441,21 @@ class Acao extends BaseController{
 			//$mail->AddAddress("rodrigo@leadlink.com.br",ConvertUTF("Lead Link") );
 			############################################
 			############################################
-			$mail->AddAddress("rodrigo+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
-			$mail->AddAddress("danton+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
+			$mail->AddAddress("rdzdigital@gmail.com",ConvertUTF($this->sitenome) );
+			//$mail->AddAddress("danton+pedromariano@leadlink.com.br",ConvertUTF($this->sitenome) );
 			############################################
 			############################################
 			if( $mail->Send() ){
-				$this->session->set('FrP41me_status','ok');
+				$this->session->set('P3dr0m4RiaNo_status','ok');
 				Redireciona($_POST['redirect']);
 			}else{
-				$this->session->set('FrP41me_status','no');
+				$this->session->set('P3dr0m4RiaNo_status','no');
 				Redireciona($_POST['redirect']);
 			}
             ############################################
 		    ############################################
 		}else{
-			$this->session->set('FrP41me_status','erro');
+			$this->session->set('P3dr0m4RiaNo_status','erro');
 			Redireciona($_POST['redirect']);
 		}
         ############################################
@@ -469,7 +469,7 @@ class Acao extends BaseController{
 		############################################
         header('Content-Type: text/html; charset=utf-8');
         $sessao = $this->session->get('session_id');
-        $form_start = $this->session->get('FrP41me_formstart');
+        $form_start = $this->session->get('P3dr0m4RiaNo_formstart');
 		$form_submit = microtime(true);
 		$_POST['usuario'] = getUserIP();
 		$_POST['nome'] = ConvertCase($_POST['nome']);
@@ -499,9 +499,9 @@ class Acao extends BaseController{
 			############################################
 			############################################
 			// GRAVA NA SESSION COM NOME E E-MAIL
-			$this->session->set('FrP41me_nome', $_POST['nome']);
-			$this->session->set('FrP41me_email', $_POST['email']);
-			$this->session->set('FrP41me_fone', $_POST['telefone']);
+			$this->session->set('P3dr0m4RiaNo_nome', $_POST['nome']);
+			$this->session->set('P3dr0m4RiaNo_email', $_POST['email']);
+			$this->session->set('P3dr0m4RiaNo_fone', $_POST['telefone']);
 			############################################
 			############################################
 			// SALVA NO BD
@@ -546,21 +546,21 @@ class Acao extends BaseController{
 			//$mail->AddAddress("rodrigo@leadlink.com.br",ConvertUTF("Lead Link") );
 			############################################
 			############################################
-			$mail->AddAddress("rodrigo+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
-			$mail->AddAddress("danton+frprime@leadlink.com.br",ConvertUTF($this->sitenome) );
+			$mail->AddAddress("rdzdigital@gmail.com",ConvertUTF($this->sitenome) );
+			//$mail->AddAddress("danton+pedromariano@leadlink.com.br",ConvertUTF($this->sitenome) );
 			############################################
 			############################################
 			if( $mail->Send() ){
-				$this->session->set('FrP41me_status','ok');
+				$this->session->set('P3dr0m4RiaNo_status','ok');
 				Redireciona($_POST['redirect']);
 			}else{
-				$this->session->set('FrP41me_status','no');
+				$this->session->set('P3dr0m4RiaNo_status','no');
 				Redireciona($_POST['redirect']);
 			}
             ############################################
 		    ############################################
 		}else{
-			$this->session->set('FrP41me_status','erro');
+			$this->session->set('P3dr0m4RiaNo_status','erro');
 			Redireciona($_POST['redirect']);
 		}
         ############################################
@@ -578,7 +578,7 @@ class Acao extends BaseController{
 		if( $_POST && isset($_POST['codigo']) && !empty($_POST['codigo']) ){
 			############################################
 		    ############################################
-			$sessao = $this->session->get('FrP41me_favoritos');
+			$sessao = $this->session->get('P3dr0m4RiaNo_favoritos');
 			if( empty($sessao) ){
 				$sessao = array();
 			}
@@ -594,9 +594,9 @@ class Acao extends BaseController{
 			if( empty($existe) ){
 				#################################
 				#################################
-				$this->session->remove('FrP41me_favoritos');
+				$this->session->remove('P3dr0m4RiaNo_favoritos');
 				array_push($sessao,$imovel);
-				$this->session->set('FrP41me_favoritos',$sessao);
+				$this->session->set('P3dr0m4RiaNo_favoritos',$sessao);
 				#################################
 				#################################
 				$total = count($sessao);
@@ -609,9 +609,9 @@ class Acao extends BaseController{
 				unset($sessao[str_replace('k','',$existe)]);
 				#################################
 				#################################
-				$this->session->remove('FrP41me_favoritos');
+				$this->session->remove('P3dr0m4RiaNo_favoritos');
 				$novasessao = array_values($sessao);
-				$this->session->set('FrP41me_favoritos',$novasessao);
+				$this->session->set('P3dr0m4RiaNo_favoritos',$novasessao);
 				#################################
 				#################################
 				$total = count($novasessao);

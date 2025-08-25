@@ -4,186 +4,128 @@
     <?php echo view('site/inc/topo'); ?>
     <!-- ################################ -->
     <!-- ################################ -->
-    <section class="fleft100 empresa internas">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 title-sc-home mb-4">
-                    <h1 class="h2-home">Sobre a FR Prime</h1>
-                    <span class="sub-title"><span></span> A FR Prime não surgiu por acaso — surgiu com um propósito claro.</span>
-                </div>
+    <section class="fleft100 empresa">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-11 col-12">
+					<figure class="figure-title">
+						<img src="<?php echo base_url(); ?>assets/site/img/bg-empresa.jpg" class="lazy-cover" alt="">
+						<div class="col-lg-10 col-12 sobre-title">
+							<h1>Sobre a empresa</h1>
+						</div>
+					</figure>
+				</div>
 
-                <figure class="col-12 imagem-empresa">
-                    <img data-src="<?php echo Foto(base_url().'uploads/arquivos/'.$secao->imagem,'original'); ?>" class="lazy lazy-cover" alt="<?php echo $secao->titulo; ?>">
-                </figure>
+				<div class="col-lg-9 col-12">
+					<ul class="bts-empresa my-5">
+						<li><a href="#anos" class="deslize">56 anos</a></li>
+						<li><a href="#principios" class="deslize">Principios</a></li>
+						<li><a href="#missao" class="deslize">Missão</a></li>
+						<li><a href="#visao" class="deslize">Visão</a></li>
+						<li><a href="#valores" class="deslize">Valores</a></li>
+						<li><a href="#historia" class="deslize">Hostória de Sucesso</a></li>
+					</ul>
 
-                <div class="col-lg-9 col-12 mt-5">
-                    <h2 class="mb-4">Quem Somos</h2>
-                    <p>Na FR Prime Imóveis, não estamos aqui para brincar.
-                    <br><br>
-                    Não somos apenas mais uma imobiliária em Volta Redonda ou São Paulo.
-                    <b>Somos especialistas em transformar sonhos em patrimônio.</b>
-                    <br><br>
-                    Começamos pequenos, mas desde o primeiro dia sabíamos: <br>
-                    o objetivo era maior — redefinir a forma como as pessoas enxergam o mercado imobiliário.
-                    <br><br>
-                    Acreditamos que comprar ou vender um imóvel <b>não precisa ser complicado, lento ou burocrático.</b>
-                    <br><br>
-                    <b>Precisa ser simples. Rápido. Transparente.</b> <br>
-                    E é exatamente isso que entregamos todos os dias.</p>
-                </div>
+					<h2 class="h2-traco mt-5 mt-md-0" id="anos">
+						<span>56 anos <br>mercado imobiliário</span>
+						<hr>
+					</h2>
 
-                <div class="col-lg-9 col-12 mt-5">
-                    <h2 class="mb-4">Chega de corretês. <br>A gente fala sua língua</h2>
+					<p class="texto-internas">
+						Há 56 anos no mercado imobiliário, sede própria, a Pedro Mariano Imóveis tem como objetivo atender as necessidades de habitação de seus clientes, aprimorando seus produtos e serviços na região do Grande ABC. <br><br>A nossa imobiliária, conta com profissionais altamente qualificados na área Administrativa, Comercial e Jurídica, com ênfase em Venda e Locação de imóveis residenciais e comerciais, além de contar com uma equipe própria que regulariza documentação, saque de FGTS e financiamentos bancários, além de contar com departamento jurídico próprio. <br>Desenvolvemos uma filosofia de trabalho diferenciada, proporcionando qualidade, agilidade, segurança, sigilo e transparência nos serviços realizados.
+					</p>
 
-                    <p>Você já percebeu como a maioria das imobiliárias fala as mesmas coisas?
-                    <br><br>
-                    “Atendimento de excelência”, “compromisso com o cliente”, “negociações seguras”…
-                    <b>Bonito no papel. Vazio na prática.</b>
-                    <br><br>
-                    A verdade é que muita gente entra nesse mercado com esperança — e sai frustrada.
-                    Porque o atendimento é raso. <br>
-                    As promessas, genéricas. <br>
-                    E a sensação é de estar negociando com uma máquina, não com uma pessoa.
-                    <br><br>
-                    <b>A gente escuta o que você precisa antes de dizer o que pode entregar.</b> <br>
-                    Simples assim.
-                    <br><br>
-                    Você não precisa de uma empresa que fala de si mesma.
-                    <br><br>
-                    Precisa de uma que <b>entenda o que você quer — e entregue com precisão.</b>
-                    <br><br>
-                    Aqui na FR Prime:</p>
+					<h2 class="h2-traco mt-5" id="principios">
+						<span>Princípios básicos</span>
+						<hr>
+					</h2>
 
-                    <ul class="lista-seta">
-                        <li>A comunicação é direta, sem ruído</li>
-                        <li>O processo é transparente, sem surpresas</li>
-                        <li>A estratégia é pensada sob medida — pra você, não pro algoritmo</li>
-                    </ul>
-                </div>
+					<p class="texto-internas">
+						• Parceria com os clientes; <br>• Satisfação total dos clientes; <br>• Profissionalismo, cordialidade e qualidade no atendimento;
+					</p>
 
-                <div class="col-lg-9 col-12 my-5">
-                    <hr class="line">
-                </div>
+					<h2 class="h2-traco mt-5" id="missao">
+						<span>Nossa Missão</span>
+						<hr>
+					</h2>
 
-                <div class="col-lg-9 col-12">
-                    <h2 class="h2-icone mb-4"><img data-src="<?php echo base_url(); ?>assets/site/img/tra.png" class="lazy" alt="Nossa Trajetória"> Nossa Trajetória</h2>
-                    <p>Nosso crescimento acelerado <b>não foi coincidência.</b>
-                    <br><br>
-                    Enquanto muitos focavam apenas em imóveis, nós escolhemos focar nas pessoas.
-                    <br><br>
-                    Cada cliente é tratado como único. <br>
-                    Cada negócio, conduzido com precisão cirúrgica. <br>
-                    <b>Não medimos esforços para garantir segurança, tranquilidade e resultado real.</b>
-                    <br><br>
-                    Hoje, somos referência não apenas na <b>região Sul Fluminense</b>, mas também em <b>São Paulo</b>, uma das cidades mais vibrantes e promissoras do país.
-                    <br><br>
-                    Nossa presença digital é forte, nossa equipe é afiada, e nossos resultados falam por si.</p>
-                </div>
+					<p class="texto-internas">
+						Atender as necessidades de habitação de nossos clientes, aprimorando produtos e serviços, prosperando como empresa e proporcionando retorno a todas as pessoas envolvidas no processo e superar as expectativas no atendimento e credibilidade nos negócios imobiliários. Atendimento eficiente, dinâmico e personalizado;
+						<br><br>
+						• Ética e transparência nas negociações; <br>
+						• Eficiência e segurança em gestão imobiliária; <br>
+						• Estabelecimento e consolidação de parcerias com incorporadoras e construtoras; <br>
+						• Elaboração e comercialização de projetos imobiliários;
+					</p>
 
-                <div class="col-lg-9 col-12 my-5">
-                    <hr class="line">
-                </div>
+					<h2 class="h2-traco mt-5" id="visao">
+						<span>Nossa Visão</span>
+						<hr>
+					</h2>
 
-                <div class="col-lg-9 col-12">
-                    <h2 class="h2-icone mb-4"><img data-src="<?php echo base_url(); ?>assets/site/img/pro.png" class="lazy" alt="Nosso Propósito"> Nosso Propósito</h2>
-                    <p>O mercado imobiliário, pra gente, <b>é mais do que negócio</b>. <br>
-                    É ferramenta de <b>liberdade, transformação e crescimento real</b>.
-                    <br><br>
-                    Acreditamos — com todas as letras — que o mercado imobiliário é uma das formas mais sólidas e inteligentes de construir liberdade financeira. <br>
-                    E não falamos isso só na teoria. <br>
-                    <b>Vivemos isso na prática</b>.
-                    <br><br>
-                    Erramos, acertamos, investimos pesado, aprendemos — e evoluímos. <br>
-                    <b>O que entregamos hoje é resultado de experiência real, visão de longo prazo e compromisso com execução.</b>
-                    <br><br>
-                    <b>Transformar histórias com estratégia, conhecimento e resultado.</b> <br>
-                    Esse é o nosso propósito. <br>
-                    E é isso que move cada passo da FR Prime.
-                    </p>
-                </div>
+					<p class="texto-internas">
+						Atender da melhor forma as necessidades de nosso clientes buscando as melhores soluções do mercado imobiliário, que privilegia padrões de excelência, segurança e crescimento constante e competitivo, ser a maior imobiliária na gestão e negociação no Brasil e prezando sempre a excelência de nossos serviços.
+					</p>
 
-                <div class="col-lg-9 col-12 my-5">
-                    <hr class="line">
-                </div>
+					<h2 class="h2-traco mt-5" id="valores">
+						<span>Nossos Valores</span>
+						<hr>
+					</h2>
 
-                <div class="col-lg-9 col-12">
-                    <h2 class="h2-icone mb-4"><img data-src="<?php echo base_url(); ?>assets/site/img/mo.png" class="lazy" alt="Nosso Propósito"> O que Nos Move</h2>
-                    <p>
-                        <span>Mudança com segurança</span> <br>
-                        Sabemos que toda mudança envolve grandes decisões. <br>
-                        Por isso, oferecemos <b>suporte completo e personalizado</b> — para que cada passo seja dado com confiança.
-                        <br><br>
-                        <span>Pessoas em primeiro lugar</span> <br>
-                        Imóveis são o nosso negócio. <br>
-                        Mas o que realmente nos inspira <b>são as histórias por trás de cada negociação</b>. <br>
-                        Cada cliente é único. Cada relacionamento é essencial.
-                        <br><br>
-                        <span>Liberdade financeira real</span> <br>
-                        Com estratégia, inteligência e acompanhamento, <b>transformamos imóveis em ferramentas reais de construção de patrimônio</b>.
-                    </p>
-                </div>
+					<p class="texto-internas">
+						• Qualidade e eficácia: Fazer o que oferece com excelência. <br>
+						• Respeito às pessoas: Valorizar, apoiar e reconhecer os colaboradores.  <br>Tratar com gentileza, educação, atenção e sem distinção os colaboradores, clientes, fornecedores e parceiros. <br>
+						• Compromisso: Cumprir obrigações e compromissos assumidos com clientes, colaboradores, fornecedores e parceiros. <br>
+						• Respeito: Acreditamos que está é a base de toda e qualquer relação, seja ela pessoal ou profissional. <br>
+						• Profissionalismo: Comprometimento e seriedade, com foco na qualidade dos serviços prestados. <br>
+						• Parceria: A união de esforços com nossos parceiros e colaboradores resultará sempre em grandes conquistas para todas as partes. <br>
+						• Inovação: Buscar soluções inovadoras e eficazes para a agilidade e qualidade de nossos resultados. <br>
+						• Transparência: Agir com seriedade, honestidade e clareza em nossos relacionamentos.
+					</p>
 
-                <div class="col-lg-10 col-12 mt-5">
-                    <div class="prime-box">
-                        <div class="row gutter-x3">
-                            <div class="col-lg-5 col-12 my-3">
-                                <h2>FR Prime Imóveis</h2>
-                                <h3>Chega de promessas. <br>aqui é resultado.</h3>
+					<h2 class="h2-traco mt-5" id="historia">
+						<span>História de Sucesso</span>
+						<hr>
+					</h2>
 
-                                <figure><img data-src="<?php echo base_url(); ?>assets/site/img/sobre-small.jpg" class="lazy lazy-cover" alt=""></figure>
-                            </div>
-                            <div class="col-lg-7 col-12 my-3">
-                                <p>
-                                    Quando estiver pronto para transformar planos em realidade, conte com a gente. <br>
-                                    <b>Não oferecemos apenas imóveis.</b>
-                                    <br><br>
-                                    Entregamos <b>direção, clareza, rentabilidade e segurança.</b>
-                                    <br><br>
-                                    Se você quer:
-                                </p>
+					<p class="texto-internas">
+						Tudo começou no Sertão do Estado da Paraíba (PB), quando jovem Pedro Mariano de Sá, com apenas 19 anos de idade, foi convocado pelo Exército Brasileiro a participar de um dos eventos mais triste da história do Brasil – a 2ª Guerra Mundial, onde nosso país deu sua participação contra os Nazistas.
+						<br><br>
+						Percorreu 586 km, em cima de um caminhão até a Capital do Estado de João Pessoa, em seguida Natal (RN) e, por fim chegou ao estado do Rio de Janeiro. Por lá, ingressou no serviço militar, chegando ao posto de segundo Sargento; porém a Guerra findou-se, quando já estava embarcado a caminho da Itália para a guerra como pracinha.
+						<br><br>
+						Permaneceu ainda por alguns meses no Exército Brasileiro, porém pediu baixa e começou sua vida civil, realizou diversos serviços: foi cobrador e motorista de ônibus, carteiro, instrutor de auto-escola; foi quando foi convidado por um de seus grandes amigos (Otacílio Leandro Cruz) e veio para a cidade de São Paulo, para trabalhar na montadora de veículos VEMAG, por onde estabeleceu-se por alguns anos.
+						<br><br>
+						Casado e pai de dois filhos menores de idade, por convite de seu cunhado Francisco Cruz ingressou no ramo imobiliário, iniciou suas atividades em uma imobiliária no Sacomã (no bairro do Ipiranga). Com grande habilidade e força de vontade, após 02 anos montou seu próprio escritório, juntamente a dois sócios – a LOFEMA IMÓVEIS, está sociedade permaneceu por alguns anos.
+						<br><br>
+						Em 1968, Pedro Mariano decide montar seu próprio escritório no bairro de Rudge Ramos na cidade de São Bernardo do Campo, aí então nasceu a Pedro Mariano Imóveis, corretor de imóveis e administrador de bens, sua carreira na cidade foi sempre pressentida por diversas conquistas.
+						<br><br>
+						Com visão empreendedora, notou que a cidade tinha grande potencial, pois encontrava-se em desenvolvimento. Instalou-se em uma das vias mais movimentadas da região (Av. Dr. Rudge Ramos,208) próximo ao Largo e aos comércios do local.
+						<br><br>
+						Sempre preocupado pelo âmbito social, participou na Associação Comercial de São Bernardo do Campo, chegando a ser diretor por diversas gestões e, por último, sendo Diretor de Patrimônio. Participou da fundação da Santa Casa da cidade, na Creche Oswaldo Cruz em São Caetano e diversos Projetos Sociais.
+						<br><br>
+						Homem de garra, esforçado e batalhador, Pedro Mariano queria mais…. Aos 58 anos de idade, foi atrás de mais um sonho, ser advogado! Ingressou na faculdade de Direito, formou-se aos 62 anos.
+						<br><br>
+						Família Pedro Mariano Imóveis, este ano é de festa! 50 anos.
+						A Pedro Mariano Imóveis se orgulha em fazer parte da história da região do ABC, pioneira no segmento de venda e compra – com financiamento bancário, deu condição a diversas famílias a obtenção da primeira casa própria.
+						<br><br>
+						No ano de 2018 a Pedro Mariano Imóveis completa 50 anos no ramo imobiliário, com sede própria situada na Av. Dr. Rudge Ramos, nº 208 – SBC.
+						<br><br>
+						Pedro Mariano, faleceu em 31 de Dezembro de 2015, cumpriu sua missão com esplendor e deixou legado a nós e todos nossos colaboradores, amigos e clientes. Atualmente a empresa é liderada pela segunda e terceira geração, buscando sempre excelência no atendimento, êxito nos negócios, inovando com novas tecnologias e trazendo cada vez mais parceiros, mantendo a fidelidade de nossos clientes com a Garantia de Bons Negócios.
+						<br><br>
+						Parabéns…
+					</p>
+				</div>
 
-                                <ul class="lista-seta mb-3">
-                                    <li>Comprar seu primeiro imóvel</li>
-                                    <li>Vender com agilidade</li>
-                                    <li>Investir com visão de longo prazo</li>
-                                </ul>
-
-                                <p>...nós estamos aqui. Do início ao fim, lado a lado.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5 gutter-x3 mb-5 local-empresa">
-                <div class="col-lg-10 title-sc-home col-12 mb-3">
-                    <h2 class="h2-home">Mais do que imóveis</h2>
-                    <span class="sub-title"><span></span> Histórias reais. Resultados reais.</span>
-                    <h3>A chave do próximo capítulo de sua vida está aqui - na FR Prime Imóveis.</h3>
-                </div>
-
-                <div class="col-md-6 col-12 mt-4">
-                    <div class="card-prime">
-                        <figure><img data-src="<?php echo base_url(); ?>assets/site/img/a4.jpg" class="lazy lazy-cover" alt=""></figure>
-                        <div class="texto-prime">
-                            <h3><small>IMOBILIÁRIA EM</small> ALPHAVILLE/SP</h3>
-                            <a href="" class="bt-seta">Conheça <?php include caminho_fisico()."assets/site/img/seta_up.svg"; ?></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-12 mt-4">
-                    <div class="card-prime">
-                        <figure><img data-src="<?php echo base_url(); ?>assets/site/img/a4.jpg" class="lazy lazy-cover" alt=""></figure>
-                        <div class="texto-prime">
-                            <h3><small>IMOBILIÁRIA EM</small> VOLTA REDONDA/RJ</h3>
-                            <a href="" class="bt-seta">Conheça <?php include caminho_fisico()."assets/site/img/seta_up.svg"; ?></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+				<ul class="col-12 thumbs-empresa">
+					<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+					<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+					<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+					<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+					<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
     <!-- ################################ -->
     <!-- ################################ -->
 <?php echo view('site/inc/rodape'); ?>

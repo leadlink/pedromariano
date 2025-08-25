@@ -120,7 +120,7 @@ if( !function_exists('Busca') ){
 		if( !empty($modo) ){
 			if( $modo == 'alugar' ){
 				array_push($tags,'Alugar');
-				$session->set('FrP41me_modo','Aluguel');
+				$session->set('P3dr0m4RiaNo_modo','Aluguel');
 				$data['modo'] = 'Aluguel';
 				$modobanner = 'A';
 				if( empty($code) ){
@@ -128,7 +128,7 @@ if( !function_exists('Busca') ){
 				}
 			}else{
 				array_push($tags,'à Venda');
-				$session->set('FrP41me_modo','Venda');
+				$session->set('P3dr0m4RiaNo_modo','Venda');
 				$data['modo'] = 'Venda';
 				$modobanner = 'V';
 				if( empty($code) ){
@@ -332,7 +332,7 @@ if( !function_exists('Busca') ){
 		$data['paginacao'] 	= $paginacao->create_links();
 		#############################################
 		#############################################
-		$origem = $session->get('FrP41me_origem');
+		$origem = $session->get('P3dr0m4RiaNo_origem');
 
 		if( !empty($origem) ){
 			$busca['origem'] = $origem;

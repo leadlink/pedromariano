@@ -9,19 +9,19 @@ class Favoritos extends BaseController{
         $dados = $this->dados;
         ############################################
 		############################################
-        $sessorigem = $this->session->get('FrP41me_origem');
+        $sessorigem = $this->session->get('P3dr0m4RiaNo_origem');
 
 		if( !empty($sessorigem) ){
 			$dados['origem'] = $sessorigem;
 		}
 		if( !empty($origem) && in_array($origem,ORIGEM) ){
-			$this->session->set('FrP41me_origem',$origem);
+			$this->session->set('P3dr0m4RiaNo_origem',$origem);
 			$dados['origem'] = $origem;
 		}
         ############################################
 		############################################
 		## CONFIGURAÇÕES DA PÁGINA
-		$dados['secao'] = $this->SiteModel->getRegistro('tb_secoes','id','6');
+		$dados['secao'] = $this->SiteModel->getRegistro('tb_secoes','id','9');
 		$dados['titulo'] = $dados['secao']->titulo.' - '.$dados['config']->titulo;
 		$dados['descricao'] = Redutor($dados['secao']->descricao,250);
 		$dados['keywords'] = SetNulo($dados['secao']->keywords);
@@ -29,7 +29,7 @@ class Favoritos extends BaseController{
 		############################################
 		############################################
         ## IMÓVEIS FAVORITOS
-        $sessfavoritos = $this->session->get('FrP41me_favoritos');
+        $sessfavoritos = $this->session->get('P3dr0m4RiaNo_favoritos');
         ####################
         $locacao = array();
 		$venda = array();

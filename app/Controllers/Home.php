@@ -1,27 +1,27 @@
 <?php
 namespace App\Controllers;
 
-//use App\Libraries\Imoview;
+//use App\Libraries\Vista;
 
 class Home extends BaseController{
 
     public function index($origem = NULL){
         ############################################
 		############################################
-		//$Imoview = new Imoview();
-		//Debugar($Imoview->Imovel('6672'),1);
+		//$Vista = new Vista();
+		//Debugar($Vista->Campos('imovel'),1);
 		############################################
 		############################################
         $dados = $this->dados;
         ############################################
 		############################################
-        $sessorigem = $this->session->get('FrP41me_origem');
+        $sessorigem = $this->session->get('P3dr0m4RiaNo_origem');
 
 		if( !empty($sessorigem) ){
 			$dados['origem'] = $sessorigem;
 		}
 		if( !empty($origem) && in_array($origem,ORIGEM) ){
-			$this->session->set('FrP41me_origem',$origem);
+			$this->session->set('P3dr0m4RiaNo_origem',$origem);
 			$dados['origem'] = $origem;
 		}
         ############################################
@@ -92,18 +92,6 @@ class Home extends BaseController{
 		$cond = implode(' AND ',$cond);
 
 		$dados['imoveis_investir'] = $this->SiteModel->BuscaImoveis($cond,$ordem,'1','4');
-		############################################
-		############################################
-		## DEPOIMENTOS DA HOME
-		$dados['depoimentos'] = $this->SiteModel->getRegs('tb_depoimentos',array(
-			'order_by' => array(
-				'key' => 'id',
-				'dir' => 'random'
-			),
-			'limit' => '3',
-			'offset' => '0',
-			'status' => '1'
-		));
 		############################################
 		############################################
 		## LINKS IMÓVEIS MAIS BUSCADOS

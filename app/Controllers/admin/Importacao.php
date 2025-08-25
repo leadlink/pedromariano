@@ -16,7 +16,48 @@ class Importacao extends BaseController{
     }
     ######################################################################################################
     ######################################################################################################
-    public function carga(){
+    public function cache(){
+		#######################################
+		#######################################
+		$inicio = microtime(true);
+		#######################################
+		#######################################
+		// Controle de Sessions
+		LimpaSessions(20000);
+		#######################################
+		#######################################
+		// VISTA
+		$Vista = new Vista();
+		#######################################
+		#######################################
+		// LIMPA CACHE
+		$Vista->ReloadCache();
+		#######################################
+		#######################################
+		// SALVA LOG
+		unset($log);
+		$fim = microtime(true);
+
+		$log['tipo'] = 'Limpeza de Cache do Vista';
+		$log['imoveis'] = NULL;
+		$log['log'] = 'Cache do Vista';
+		$log['data'] = date("Y-m-d H:i:s");
+		$log['tempo'] = number_format($fim-$inicio, 0, '', '');
+		$log['status'] = 'S';
+
+		$this->SiteModel->Add('tb_log_importacao',$log);
+		#######################################
+		#######################################
+        echo "<hr>";
+		echo "<h2>Limpeza de Cache do Vista realizada com Sucesso.</h2>";
+        echo "<hr>";
+		die();
+		#######################################
+		#######################################
+	}
+    ######################################################################################################
+    ######################################################################################################
+    public function carga( $tipo = NULL ){
         ############################################
 		############################################
         // SETA OS LIMITES
@@ -28,8 +69,17 @@ class Importacao extends BaseController{
         ############################################
 		############################################
         $inicio = microtime(true);
-        $total = 0;
+        $t = 0;
         $logimoveis = array();
+        $imos = array();
+		$cond = array();
+        ############################################
+		############################################
+        if( !empty($tipo) ){
+            define('TABELA','tb_imoveis_carga_completa');
+        }else{
+            define('TABELA','tb_imoveis_carga');
+        }
         ############################################
 		############################################
         define('PERPAGE','50');
@@ -38,46 +88,47 @@ class Importacao extends BaseController{
         $dados = $this->dados;
         ############################################
 		############################################
-        $Imoview = new Imoview();
+        $Vista = new Vista();
 
-        $parametros = array(
-            "finalidade" => "0",
-            "ordenacao" => "dataatualizacaodesc",
-            "numeroPagina" => "1",
-            "numeroRegistros" => PERPAGE
-        );
+        $ordem = '"DataHoraAtualizacao":"desc"';
+		$consulta = $Vista->Pesquisa($cond,$ordem,1,PERPAGE);
+		$imoveis = $consulta;
+		$total = $consulta['total'];
+		$paginas = $consulta['paginas'];
 
-        $imoveis = $Imoview->Pesquisa($parametros);
+		unset($imoveis['total']);
+		unset($imoveis['pagina']);
+		unset($imoveis['paginas']);
+		unset($imoveis['quantidade']);
+		unset($imoveis['status']);
+		unset($imoveis['message']);
         ############################################
 		############################################
-        $paginas = ceil($imoveis['quantidade']/PERPAGE);
-        ############################################
-		############################################
-        if( $imoveis['quantidade'] > 0 && count($imoveis['lista']) > 0 ){
+        if( $total > 0 ){
             ############################################
             ############################################
             // LIMPA AS TABELAS DE IMÓVEIS
-            $this->SiteModel->Truncate('tb_imoveis_carga');
+            $this->SiteModel->Truncate(TABELA);
             ############################################
             ############################################
-            foreach( $imoveis['lista'] as $imo ){
+            foreach( $imoveis as $imo ){
                 ############################################
                 ############################################
                 // SALVA IMÓVEL
                 $imovel = arrayToObject($imo);
 
                 unset($reg);
-				$reg['codigo'] = ((!empty($imovel->codigoauxiliar))?$imovel->codigoauxiliar:$imovel->codigo);
-                $reg['referencia'] = $imovel->codigo;
-                $reg['atualizacao'] = DataConv($imovel->datahoraultimaalteracao,'FullBRtoBD');
-				$reg['cadastro'] = DataConv($imovel->datahoracadastro,'FullBRtoBD');
+				$reg['codigo'] = $imovel->Codigo;
+                $reg['referencia'] = $imovel->ImoCodigo;
+                $reg['atualizacao'] = DataConv($imovel->DataHoraAtualizacao,'FullBRtoBD');
+				$reg['cadastro'] = DataConv($imovel->DataCadastro,'FullBRtoBD');
                 $reg['data'] = date("Y-m-d H:i:s");
 				$reg['processado'] = NULL;
 				$reg['status'] = '0';
                 $reg['log'] = serialize($imo);
 
-                $this->SiteModel->Add('tb_imoveis_carga',$reg);
-                $total++;
+                $this->SiteModel->Add(TABELA,$reg);
+                $t++;
                 array_push($logimoveis,$reg['codigo']);
                 ############################################
                 ############################################
@@ -87,31 +138,38 @@ class Importacao extends BaseController{
             for( $i = 2; $i <= $paginas; $i++ ){
                 ############################################
                 ############################################
-                $parametros['numeroPagina'] = $i;
-                $imoveis2 = $Imoview->Pesquisa($parametros);
+                $consulta2 = $Vista->Pesquisa($cond,$ordem,$i,PERPAGE);
+                $imoveis2 = $consulta2;
+
+                unset($imoveis2['total']);
+                unset($imoveis2['pagina']);
+                unset($imoveis2['paginas']);
+                unset($imoveis2['quantidade']);
+                unset($imoveis2['status']);
+                unset($imoveis2['message']);
                 ############################################
                 ############################################
-                if( $imoveis2['quantidade'] > 0 && count($imoveis2['lista']) > 0 ){
+                if( $consulta2['total'] > 0 ){
                     ########################################
                     ########################################
-                    foreach( $imoveis2['lista'] as $imo ){
+                    foreach( $imoveis2 as $imo ){
                         ########################################
                         ########################################
                         // SALVA IMÓVEL
                         $imovel = arrayToObject($imo);
 
                         unset($reg);
-                        $reg['codigo'] = ((!empty($imovel->codigoauxiliar))?$imovel->codigoauxiliar:$imovel->codigo);
-                        $reg['referencia'] = $imovel->codigo;
-                        $reg['atualizacao'] = DataConv($imovel->datahoraultimaalteracao,'FullBRtoBD');
-                        $reg['cadastro'] = DataConv($imovel->datahoracadastro,'FullBRtoBD');
+                        $reg['codigo'] = $imovel->Codigo;
+                        $reg['referencia'] = $imovel->ImoCodigo;
+                        $reg['atualizacao'] = DataConv($imovel->DataHoraAtualizacao,'FullBRtoBD');
+                        $reg['cadastro'] = DataConv($imovel->DataCadastro,'FullBRtoBD');
                         $reg['data'] = date("Y-m-d H:i:s");
                         $reg['processado'] = NULL;
                         $reg['status'] = '0';
                         $reg['log'] = serialize($imo);
 
-                        $this->SiteModel->Add('tb_imoveis_carga',$reg);
-                        $total++;
+                        $this->SiteModel->Add(TABELA,$reg);
+                        $t++;
                         array_push($logimoveis,$reg['codigo']);
                         ########################################
                         ########################################
@@ -128,7 +186,11 @@ class Importacao extends BaseController{
 			unset($log);
 			$fim = microtime(true);
 
-			$log['tipo'] = 'Carga de Imóveis '.$total.'/'.$imoveis['quantidade'];
+            if( !empty($tipo) ){
+                $log['tipo'] = 'Carga Completa de Imóveis '.$t.'/'.$total;
+            }else{
+                $log['tipo'] = 'Carga de Imóveis '.$t.'/'.$total;
+            }
 			$log['imoveis'] = $total;
 			$log['log'] = implode(";",$logimoveis);
 			$log['data'] = date("Y-m-d H:i:s");
@@ -139,9 +201,9 @@ class Importacao extends BaseController{
             ############################################
             ############################################
             echo "<hr>";
-            echo "<h2>Carga de Imóveis do Imoview (Universal)</h2>";
-			echo "<h3>Imóveis na API: ".$imoveis['quantidade']."</h3>";
-            echo "<h3>Imóveis Salvos na Carga: ".$total."</h3>";
+            echo "<h2>Carga de Imóveis do Vista (Loft)</h2>";
+			echo "<h3>Imóveis na API: ".$total."</h3>";
+            echo "<h3>Imóveis Salvos na Carga: ".$t."</h3>";
             echo "<hr>";
 			die();
             ############################################
@@ -164,7 +226,7 @@ class Importacao extends BaseController{
             ############################################
             ############################################
             echo "<hr>";
-            echo "<h2>Carga de Imóveis do Imoview (Universal)</h2>";
+            echo "<h2>Carga de Imóveis do Vista (Loft)</h2>";
 			echo "<h3>Ocorreu um erro na Carga</h3>";
             echo "<hr>";
 			die();

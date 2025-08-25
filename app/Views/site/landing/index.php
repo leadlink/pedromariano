@@ -4,12 +4,11 @@
     <?php echo view('site/inc/topo'); ?>
     <!-- ################################ -->
     <!-- ################################ -->
-    <section class="fleft100 ficha">
+    <section class="fleft100 ficha landing">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 title-ficha">
-					<h1>Casa em Condomínio 4 quartos à venda, Centro - Santo André</h1>
-					<span class="code">Código 2432423</span>
+					<h1>Titulo da landing page</h1>
 				</div>
 
 				<div class="col-12 thumbs-ficha mt-3">
@@ -23,11 +22,7 @@
 								<a href=""><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="#1C274C" stroke-width="1.5"/><path d="M15.4137 10.941C16.1954 11.4026 16.1954 12.5974 15.4137 13.059L10.6935 15.8458C9.93371 16.2944 9 15.7105 9 14.7868L9 9.21316C9 8.28947 9.93371 7.70561 10.6935 8.15419L15.4137 10.941Z" stroke="#1f1f1f" stroke-width="1.5"/></svg> Vídeo</a>
 							</div>
 						</li>
-						<li><figure><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="fotos"><img src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy-cover" alt="Titulo da imagem"></a></figure></li>
-						<li><figure><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="fotos"><img src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy-cover" alt="Titulo da imagem"></a></figure></li>
-						<li><figure><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="fotos"><img src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy-cover" alt="Titulo da imagem"></a></figure></li>
-						<li><figure><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="fotos"><img src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy-cover" alt="Titulo da imagem"></a></figure></li>
-					</ul>
+					</ul>				
 				</div>
 
 				<div class="col-lg-7 col-12 mt-4">
@@ -85,9 +80,26 @@
 						</div>
 					</div>
 
-					<hr class="line mt-4">
+					<div class="galeria mt-5">
+						<h2 class="h2-menor mb-4">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Media / Image_01"><path id="Vector" d="M3.00005 17.0001C3 16.9355 3 16.8689 3 16.8002V7.2002C3 6.08009 3 5.51962 3.21799 5.0918C3.40973 4.71547 3.71547 4.40973 4.0918 4.21799C4.51962 4 5.08009 4 6.2002 4H17.8002C18.9203 4 19.4801 4 19.9079 4.21799C20.2842 4.40973 20.5905 4.71547 20.7822 5.0918C21 5.5192 21 6.07899 21 7.19691V16.8031C21 17.2881 21 17.6679 20.9822 17.9774M3.00005 17.0001C3.00082 17.9884 3.01337 18.5058 3.21799 18.9074C3.40973 19.2837 3.71547 19.5905 4.0918 19.7822C4.5192 20 5.07899 20 6.19691 20H17.8036C18.9215 20 19.4805 20 19.9079 19.7822C20.2842 19.5905 20.5905 19.2837 20.7822 18.9074C20.9055 18.6654 20.959 18.3813 20.9822 17.9774M3.00005 17.0001L7.76798 11.4375L7.76939 11.436C8.19227 10.9426 8.40406 10.6955 8.65527 10.6064C8.87594 10.5282 9.11686 10.53 9.33643 10.6113C9.58664 10.704 9.79506 10.9539 10.2119 11.4541L12.8831 14.6595C13.269 15.1226 13.463 15.3554 13.6986 15.4489C13.9065 15.5313 14.1357 15.5406 14.3501 15.4773C14.5942 15.4053 14.8091 15.1904 15.2388 14.7607L15.7358 14.2637C16.1733 13.8262 16.3921 13.6076 16.6397 13.5361C16.8571 13.4734 17.0896 13.4869 17.2988 13.5732C17.537 13.6716 17.7302 13.9124 18.1167 14.3955L20.9822 17.9774M20.9822 17.9774L21 17.9996M15 10C14.4477 10 14 9.55228 14 9C14 8.44772 14.4477 8 15 8C15.5523 8 16 8.44772 16 9C16 9.55228 15.5523 10 15 10Z" stroke="#1f1f1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+							<span>Galeria de fotos</span>
+						</h2>
 
-					<div class="localizacao mt-4">
+						<ul class="thumbs-empresa">
+							<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+							<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+							<li><a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs"><img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt=""></a></li>
+							<li>
+								<img data-src="<?php echo base_url(); ?>assets/site/img/imovel.jpg" class="lazy lazy-cover" alt="">
+								<a href="<?php echo base_url(); ?>assets/site/img/imovel.jpg" data-fancybox="thumbs" class="sobre-gal">
+									<span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Media / Image_01"><path id="Vector" d="M3.00005 17.0001C3 16.9355 3 16.8689 3 16.8002V7.2002C3 6.08009 3 5.51962 3.21799 5.0918C3.40973 4.71547 3.71547 4.40973 4.0918 4.21799C4.51962 4 5.08009 4 6.2002 4H17.8002C18.9203 4 19.4801 4 19.9079 4.21799C20.2842 4.40973 20.5905 4.71547 20.7822 5.0918C21 5.5192 21 6.07899 21 7.19691V16.8031C21 17.2881 21 17.6679 20.9822 17.9774M3.00005 17.0001C3.00082 17.9884 3.01337 18.5058 3.21799 18.9074C3.40973 19.2837 3.71547 19.5905 4.0918 19.7822C4.5192 20 5.07899 20 6.19691 20H17.8036C18.9215 20 19.4805 20 19.9079 19.7822C20.2842 19.5905 20.5905 19.2837 20.7822 18.9074C20.9055 18.6654 20.959 18.3813 20.9822 17.9774M3.00005 17.0001L7.76798 11.4375L7.76939 11.436C8.19227 10.9426 8.40406 10.6955 8.65527 10.6064C8.87594 10.5282 9.11686 10.53 9.33643 10.6113C9.58664 10.704 9.79506 10.9539 10.2119 11.4541L12.8831 14.6595C13.269 15.1226 13.463 15.3554 13.6986 15.4489C13.9065 15.5313 14.1357 15.5406 14.3501 15.4773C14.5942 15.4053 14.8091 15.1904 15.2388 14.7607L15.7358 14.2637C16.1733 13.8262 16.3921 13.6076 16.6397 13.5361C16.8571 13.4734 17.0896 13.4869 17.2988 13.5732C17.537 13.6716 17.7302 13.9124 18.1167 14.3955L20.9822 17.9774M20.9822 17.9774L21 17.9996M15 10C14.4477 10 14 9.55228 14 9C14 8.44772 14.4477 8 15 8C15.5523 8 16 8.44772 16 9C16 9.55228 15.5523 10 15 10Z" stroke="#1f1f1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> Ver mais fotos</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="localizacao mt-5">
 						<h2 class="h2-menor mb-4">
 							<svg fill="#1f1f1f" width="18" height="18" viewBox="0 0 15 15" id="marker-stroked" xmlns="http://www.w3.org/2000/svg"><path id="Layer_7" d="M7.5,14.941l-.4-.495c-.973-1.189-4.9-6.556-4.9-9.16A5.066,5.066,0,0,1,7.036,0q.222-.01.445,0a5.066,5.066,0,0,1,5.286,4.836q.01.225,0,.45c0,2.213-2.669,6.111-4.678,8.851ZM7.481.986a4.077,4.077,0,0,0-4.3,4.3c0,1.832,2.759,6.038,4.286,8.034,1.25-1.71,4.315-5.989,4.315-8.034a4.077,4.077,0,0,0-4.3-4.3Z"/></svg>
 							<span>
@@ -158,7 +170,7 @@
 											<small>DOMINGO</small>
 											<span>05/12</span>
 										</label>
-									</li>
+									</li>								
 								</ul>
 							</div>
 
@@ -183,7 +195,7 @@
 											<small>TELEFONE</small>
 											<input type="text" name="telefone">
 										</label>
-									</div>
+									</div>							
 								</div>
 							</div>
 							<div class="col-lg-2 col-md-6 col-12 ps-lg-1 my-1">

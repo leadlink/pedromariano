@@ -4,137 +4,130 @@
     <?php echo view('site/inc/topo'); ?>
     <!-- ################################ -->
     <!-- ################################ -->
-    <section class="fleft100 empresa contato internas">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 title-sc-home mb-4">
-                    <h1 class="h2-home"><?php echo $secao->titulo; ?></h1>
-                    <span class="sub-title"><span></span> Fale com a FR Prime Imóveis</span>
-                </div>
+    <section class="fleft100 avalie">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-11 col-12 mb-4">
+					<figure class="figure-title">
+						<img src="<?php echo base_url(); ?>assets/site/img/bg-contato.jpg" class="lazy-cover" alt="">
+						<div class="col-lg-11 col-12 sobre-title">
+							<h1>Contato</h1>
+						</div>
+					</figure>
+				</div>
 
-                <figure class="col-12 imagem-empresa">
-                    <img data-src="<?php echo Foto(base_url().'uploads/arquivos/'.$secao->imagem,'original'); ?>" alt="<?php echo $secao->titulo; ?>" class="lazy lazy-cover">
-                </figure>
+				<div class="col-lg-4 col-12 mt-4 pe-lg-5">
+					<h2 class="h2-traco">
+						<span>Como você quer falar conosco?</span>
+						<hr>
+					</h2>
 
-                <div class="col-lg-9 col-12 mt-5">
-                    <h2 class="mb-4">Imóveis com estratégia. <br>Atendimento com verdade.</h2>
-                    <p>Seja para comprar, vender, investir ou anunciar, aqui você fala com quem resolve. <br><br>Nossa equipe está pronta para te atender com agilidade, clareza e visão estratégica — sem enrolação e sem linguagem de corretor automático.</p>
-                </div>
+					<p>Escolha a melhor forma de contatar nossa equipe. Estamos disponíveis para atendê-lo.</p>
+				</div>
 
-                <div class="col-lg-9 col-12 mt-5">
-                    <h2 class="mb-4">Chega de corretês</h2>
+				<div class="col-lg-4 col-sm-6 col-12 mt-4 fone-ends">
+					<address>
+						<strong>Matriz - São Bernardo do Campo</strong>
+						<br><br>
+						Av. Dr. Rudge Ramos, 208, <br>
+						Rudge Ramos, <br>
+						São Bernardo do Campo, SP <br>
+						CEP: 09636-000
+						<br><br>
+						<a href="">Traçar Rota</a>
+					</address>
 
-                    <ul class="lista-seta">
-                        <li>Quer saber mais sobre um imóvel que viu no site?</li>
-                        <li>Busca orientação para investir com rentabilidade real?</li>
-                        <li>Precisa vender ou alugar seu imóvel com segurança e agilidade?</li>
-                        <li>Tem dúvidas sobre financiamento, consórcio ou gestão de imóveis?</li>
-                    </ul>
+					<ul class="links mt-4">
+						<li><a href="">sac@pedromariano.com.br</a></li>
+						<li><a href=""><svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 31.0864C0.252 30.3534 0.509 29.6214 0.759 28.8874C1.367 27.0994 1.969 25.3114 2.58 23.5234C2.623 23.3944 2.615 23.2974 2.543 23.1804C1.507 21.4854 0.835 19.6544 0.516 17.6984C0.327 16.5404 0.26 15.3734 0.358 14.2054C0.709 10.0384 2.451 6.55938 5.593 3.79638C7.698 1.94338 10.151 0.785376 12.904 0.259376C14.115 0.029376 15.34 -0.0436241 16.568 0.0243759C22.837 0.372376 28.202 4.41638 30.278 10.2424C30.704 11.4364 30.982 12.6654 31.074 13.9314C31.449 19.1204 29.66 23.4334 25.764 26.8574C23.737 28.6394 21.36 29.7504 18.709 30.2744C17.234 30.5644 15.748 30.6334 14.255 30.4914C12.161 30.2924 10.183 29.6944 8.335 28.6824C8.18 28.5974 8.047 28.5884 7.878 28.6414C5.328 29.4574 2.778 30.2684 0.226 31.0794C0.153 31.1014 0.076 31.1084 0 31.1244C0 31.1134 0 31.0994 0 31.0864ZM2.602 28.6044C2.675 28.5834 2.704 28.5754 2.734 28.5664C4.534 27.9934 6.334 27.4234 8.131 26.8494C8.28 26.8004 8.392 26.8154 8.527 26.8984C10.426 28.0674 12.494 28.7244 14.714 28.8954C15.87 28.9854 17.02 28.9184 18.163 28.7134C20.741 28.2504 23.016 27.1534 24.952 25.3944C27.608 22.9824 29.119 19.9814 29.436 16.3954C29.547 15.1264 29.479 13.8664 29.224 12.6204C28.738 10.2404 27.699 8.12538 26.08 6.31138C23.681 3.62038 20.674 2.08838 17.094 1.70538C15.707 1.55538 14.322 1.63238 12.952 1.92238C9.664 2.61538 6.952 4.26938 4.888 6.91038C2.483 9.98838 1.581 13.4914 2.142 17.3604C2.435 19.3884 3.194 21.2374 4.347 22.9244C4.432 23.0504 4.452 23.1554 4.403 23.2994C4.027 24.3884 3.659 25.4784 3.289 26.5694C3.063 27.2354 2.839 27.9004 2.602 28.6044Z" fill="#cf262a"/><path d="M8.43363 11.7713C8.42863 10.6033 8.89463 9.64635 9.72263 8.84735C9.93163 8.64435 10.1776 8.53535 10.4766 8.55135C10.7426 8.56535 11.0106 8.54335 11.2726 8.57735C11.3696 8.59035 11.4896 8.69935 11.5326 8.79435C11.7436 9.25235 11.9296 9.72135 12.1256 10.1863C12.3576 10.7353 12.5866 11.2843 12.8236 11.8313C12.8836 11.9683 12.8976 12.0993 12.8096 12.2173C12.5326 12.5903 12.2716 12.9803 11.9616 13.3243C11.5046 13.8293 11.4466 14.1773 11.7966 14.7533C13.0446 16.8133 14.7376 18.3623 16.9766 19.2933C17.1206 19.3533 17.2586 19.4243 17.4046 19.4783C17.8396 19.6413 18.2296 19.5633 18.5336 19.2073C18.9586 18.7093 19.3736 18.2013 19.7796 17.6853C19.8836 17.5533 19.9716 17.5183 20.1196 17.5873C20.9176 17.9623 21.7156 18.3313 22.5136 18.7043C22.7536 18.8173 22.9956 18.9273 23.2306 19.0513C23.2846 19.0793 23.3456 19.1593 23.3456 19.2153C23.3416 20.1883 23.0586 21.0073 22.1776 21.5653C21.5206 21.9823 20.8136 22.2313 20.0606 22.2433C19.5566 22.2513 19.0346 22.1073 18.5426 21.9573C17.3426 21.5883 16.1496 21.1883 15.0556 20.5563C13.4956 19.6513 12.1816 18.4573 11.0766 17.0463C10.4136 16.2013 9.80763 15.3063 9.22663 14.4003C8.82563 13.7793 8.58263 13.0743 8.47863 12.3333C8.45263 12.1473 8.44863 11.9583 8.43363 11.7713Z" fill="#cf262a"/></svg> (11) 4366-3977</a></li>
+					</ul>
+				</div>
 
-                    <h2 class="mt-5">Fale agora com um especialista da FR Prime.</h2>
-                    <p>
-                        É só preencher os campos abaixo ou escolher o canal de sua preferência.
-                    </p>
-                </div>
+				<div class="col-lg-3 col-sm-6 col-12 mt-4 fone-ends">
+					<address>
+						<strong>Filial - Santo André</strong>
+						<br><br>
+						Rua Padre Vieira, 485, <br>
+						Jardim, <br>
+						Santo André, SP <br>
+						CEP: 09090-720
+						<br><br>
+						<a href="">Traçar Rota</a>
+					</address>
 
-                <div class="col-lg-10 col-12 my-5">
-                    <div class="box-nivo">
-                        <form action="<?php echo base_url(); ?>envio/contato/" method="post" id="form_contato" name="form_contato" class="row form validacao">
-                            <input type="hidden" name="imovel" value="<?php echo CurrentURL(); ?>">
-                            <input type="hidden" name="redirect" value="<?php echo CurrentURL(); ?>" />
-                            <input type="hidden" name="origem" value="<?php echo service('session')->get('FrP41me_origem'); ?>" />
+					<ul class="links mt-4">
+						<li><a href="">sac@pedromariano.com.br</a></li>
+						<li><a href=""><svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 31.0864C0.252 30.3534 0.509 29.6214 0.759 28.8874C1.367 27.0994 1.969 25.3114 2.58 23.5234C2.623 23.3944 2.615 23.2974 2.543 23.1804C1.507 21.4854 0.835 19.6544 0.516 17.6984C0.327 16.5404 0.26 15.3734 0.358 14.2054C0.709 10.0384 2.451 6.55938 5.593 3.79638C7.698 1.94338 10.151 0.785376 12.904 0.259376C14.115 0.029376 15.34 -0.0436241 16.568 0.0243759C22.837 0.372376 28.202 4.41638 30.278 10.2424C30.704 11.4364 30.982 12.6654 31.074 13.9314C31.449 19.1204 29.66 23.4334 25.764 26.8574C23.737 28.6394 21.36 29.7504 18.709 30.2744C17.234 30.5644 15.748 30.6334 14.255 30.4914C12.161 30.2924 10.183 29.6944 8.335 28.6824C8.18 28.5974 8.047 28.5884 7.878 28.6414C5.328 29.4574 2.778 30.2684 0.226 31.0794C0.153 31.1014 0.076 31.1084 0 31.1244C0 31.1134 0 31.0994 0 31.0864ZM2.602 28.6044C2.675 28.5834 2.704 28.5754 2.734 28.5664C4.534 27.9934 6.334 27.4234 8.131 26.8494C8.28 26.8004 8.392 26.8154 8.527 26.8984C10.426 28.0674 12.494 28.7244 14.714 28.8954C15.87 28.9854 17.02 28.9184 18.163 28.7134C20.741 28.2504 23.016 27.1534 24.952 25.3944C27.608 22.9824 29.119 19.9814 29.436 16.3954C29.547 15.1264 29.479 13.8664 29.224 12.6204C28.738 10.2404 27.699 8.12538 26.08 6.31138C23.681 3.62038 20.674 2.08838 17.094 1.70538C15.707 1.55538 14.322 1.63238 12.952 1.92238C9.664 2.61538 6.952 4.26938 4.888 6.91038C2.483 9.98838 1.581 13.4914 2.142 17.3604C2.435 19.3884 3.194 21.2374 4.347 22.9244C4.432 23.0504 4.452 23.1554 4.403 23.2994C4.027 24.3884 3.659 25.4784 3.289 26.5694C3.063 27.2354 2.839 27.9004 2.602 28.6044Z" fill="#cf262a"/><path d="M8.43363 11.7713C8.42863 10.6033 8.89463 9.64635 9.72263 8.84735C9.93163 8.64435 10.1776 8.53535 10.4766 8.55135C10.7426 8.56535 11.0106 8.54335 11.2726 8.57735C11.3696 8.59035 11.4896 8.69935 11.5326 8.79435C11.7436 9.25235 11.9296 9.72135 12.1256 10.1863C12.3576 10.7353 12.5866 11.2843 12.8236 11.8313C12.8836 11.9683 12.8976 12.0993 12.8096 12.2173C12.5326 12.5903 12.2716 12.9803 11.9616 13.3243C11.5046 13.8293 11.4466 14.1773 11.7966 14.7533C13.0446 16.8133 14.7376 18.3623 16.9766 19.2933C17.1206 19.3533 17.2586 19.4243 17.4046 19.4783C17.8396 19.6413 18.2296 19.5633 18.5336 19.2073C18.9586 18.7093 19.3736 18.2013 19.7796 17.6853C19.8836 17.5533 19.9716 17.5183 20.1196 17.5873C20.9176 17.9623 21.7156 18.3313 22.5136 18.7043C22.7536 18.8173 22.9956 18.9273 23.2306 19.0513C23.2846 19.0793 23.3456 19.1593 23.3456 19.2153C23.3416 20.1883 23.0586 21.0073 22.1776 21.5653C21.5206 21.9823 20.8136 22.2313 20.0606 22.2433C19.5566 22.2513 19.0346 22.1073 18.5426 21.9573C17.3426 21.5883 16.1496 21.1883 15.0556 20.5563C13.4956 19.6513 12.1816 18.4573 11.0766 17.0463C10.4136 16.2013 9.80763 15.3063 9.22663 14.4003C8.82563 13.7793 8.58263 13.0743 8.47863 12.3333C8.45263 12.1473 8.44863 11.9583 8.43363 11.7713Z" fill="#cf262a"/></svg> (11) 4366-3977</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                            <input type="hidden" name="utm_source" value="<?php echo (!empty($_GET['utm_source']))?$_GET['utm_source']:''; ?>" />
-                            <input type="hidden" name="utm_medium" value="<?php echo (!empty($_GET['utm_medium']))?$_GET['utm_medium']:''; ?>" />
-                            <input type="hidden" name="utm_campaign" value="<?php echo (!empty($_GET['utm_campaign']))?$_GET['utm_campaign']:''; ?>" />
-                            <input type="hidden" name="utm_content" value="<?php echo (!empty($_GET['utm_content']))?$_GET['utm_content']:''; ?>" />
-                            <input type="hidden" name="utm_term" value="<?php echo (!empty($_GET['utm_term']))?$_GET['utm_term']:''; ?>" />
-                            <div class="col-lg-4 col-sm-6 col-12 my-2">
-                                <label>
-                                    <small>NOME</small>
-                                    <input type="text" name="nome" placeholder="Preencha seu Nome" required="required" value="<?php echo service('session')->get('FrP41me_nome'); ?>">
-                                </label>
-                            </div>
+	<section class="fleft100 form-section mb-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-11 col-12 mt-3">
+					<div class="box-destaque">
+						<form action="" class="row form">
+							<div class="col-12 title-form">
+								<h2>Simule seu Financiamento</h2>
+							</div>
 
-                            <div class="col-lg-4 col-sm-6 col-12 my-2">
-                                <label>
-                                    <small>E-MAIL</small>
-                                    <input type="text" name="email" placeholder="Preencha seu E-mail" required="required" value="<?php echo service('session')->get('FrP41me_email'); ?>">
-                                </label>
-                            </div>
+							<div class="col-12 form-inputs">
+								<div class="row">
+									<div class="col-12 title">
+										<h3><img data-src="<?php echo base_url(); ?>assets/site/img/pessoa.png" class="lazy" alt="Preencha alguns dados"> Preencha alguns dados</h3>
+									</div>
 
-                            <div class="col-lg-4 col-sm-6 col-12 my-2">
-                                <label>
-                                    <small>TELEFONE/WHATSAPP</small>
-                                    <input type="text" name="telefone" placeholder="Preencha seu Telefone" required="required" value="<?php echo service('session')->get('FrP41me_fone'); ?>">
-                                </label>
-                            </div>
+									<div class="col-md-3 col-sm-6 col-12 mb-3">
+										<label>
+											<small>NOME*</small>
+											<input type="text" name="nome" placeholder="Digite">
+										</label>
+									</div>
+									<div class="col-md-3 col-sm-6 col-12 mb-3">
+										<label>
+											<small>E-MAIL*</small>
+											<input type="text" name="nome" placeholder="Digite">
+										</label>
+									</div>
+									<div class="col-md-3 col-sm-6 col-12 mb-3">
+										<label>
+											<small>TELEFONE*</small>
+											<input type="text" name="nome" placeholder="Digite">
+										</label>
+									</div>
+									<div class="col-md-3 col-sm-6 col-12 mb-3">
+										<label>
+											<small>ASSUNTO*</small>
+											<select name="assunto">
+												<option value="">Selecione</option>
+											</select>
+										</label>
+									</div>
 
-                            <div class="col-12 my-2">
-                                <label>
-                                    <small>MENSAGEM</small>
-                                    <textarea name="mensagem" placeholder="Escreva sua Mensagem" rows="4"></textarea>
-                                </label>
-                            </div>
+									<div class="col-12 mb-4 mt-3"><hr class="line"></div>
 
-                            <div class="leadlink">
-                                <input type="text" name="leadlink" value="">
-                                <input type="text" name="linklead" value="<?php echo service('session')->get('session_id'); ?>">
-                            </div>
+									<div class="col-12 title">
+										<h3><img data-src="<?php echo base_url(); ?>assets/site/img/lapis.png" class="lazy" alt="Preencha alguns dados"> Mensagem</h3>
+									</div>
 
-                            <div class="col-lg-8 col-12 my-auto py-2">
-                                <span class="check">Ao enviar o formulário, você concorda com a nossa <a href="<?php echo base_url(); ?>politica-de-privacidade/" title="Política de Privacidade">Política de Privacidade</a>.</span>
-                            </div>
+									<div class="col-12 mb-3">
+										<textarea name="mensagem" placeholder="Digite livremente" rows="4"></textarea>
+									</div>
 
-                            <div class="col-lg-4 col-12 bt-form my-2">
-                                <input type="submit" value="Enviar">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-lg-9 col-12 mb-5">
-                    <h2 class="mb-2">Onde estamos</h2>
-                    <p>Atendemos presencialmente e online em:</p>
-
-                    <?php foreach( $enderecos as $endereco ){ ?>
-                    <ul class="e-fone">
-                        <li>
-                            <h3><?php echo $endereco->local; ?> - <?php echo $endereco->estado; ?></h3>
-                            <address>
-                                <a href="<?php echo $endereco->maps; ?>" title="Traçar Rota" target="_blank">
-                                    <?php echo $endereco->endereco; ?> - <?php echo $endereco->bairro; ?><br>
-                                    <?php echo $endereco->cidade; ?>/<?php echo $endereco->estado; ?> - CEP: <?php echo $endereco->cep; ?>
-                                </a>
-                            </address>
-                        </li>
-                        <li>
-                            <a href="tel:+<?php echo Telefone($endereco->telefone); ?>" title="Telefone" target="_blank">
-                                <small>Telefone</small>
-                                <span>
-                                    <?php include caminho_fisico()."assets/site/img/fone.svg"; ?>
-                                    <?php echo $endereco->telefone; ?>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#whatsapp<?php echo ($endereco->id == '2')?'-alphaville':''; ?>" data-bs-toggle="modal" title="WhatsApp">
-                                <small>WhatsApp</small>
-                                <span>
-                                    <?php include caminho_fisico()."assets/site/img/wpp.svg"; ?>
-									<?php echo $endereco->whatsapp; ?>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <iframe class="mapa" title="Google Maps" src="https://maps.google.com/maps?q=<?php echo urlencode($config->endereco.' - '.$endereco->bairro.', '.$endereco->cidade.', '.$endereco->estado); ?>&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    <?php } ?>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
+									<div class="col-lg-2 col-12 mt-2 offset-lg-10">
+										<input type="submit" value="Finalizar">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     <!-- ################################ -->
     <!-- ################################ -->
 <?php echo view('site/inc/rodape'); ?>
